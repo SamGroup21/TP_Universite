@@ -113,8 +113,8 @@
 
 # TD 5 EXERCICE 2 :
 
-listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
-listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
 
 # Question A :
 
@@ -133,21 +133,86 @@ listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
 
 # QUESTION C : 
 
-def nombre_min_max(l) :
-     max = l[0]
-     min = l[0]
-     for i in l :
-          if(i>max) : 
-               max = l
-          if(i<min) :
-               min = l
-     return min,max
+# def nombre_min_max(l) :
+#      max = l[0]
+#      min = l[0]
+#      for i in l :
+#           if(i>max) : 
+#                max = l
+#           if(i<min) :
+#                min = l
+#      return min,max
 
-def prog(l) : 
-     min,max = nombre_min_max(l) 
-     print("le nombre mini est",min,"le nombre maxi est:",max)
+# def prog(l) : 
+#      min,max = nombre_min_max(l) 
+#      print("le nombre mini est",min,"le nombre maxi est:",max)
 
-prog()
+# prog()
+
+# EXERCICE 3 
+# QUESTION A :
+
+def moyenne(liste: list) :
+     somme = 0
+     for i in listeTest :
+          somme = somme + i
+          i = i + 1
+
+     return somme/len(listeTest)
+
+# def prog():
+#      resu = moyenne(listeTest)
+
+#      print("La moyenne de la liste ",listeTest,"est",resu)
+
+# prog()
+
+# QUESTION B :
+
+l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+l1 = [1,3,5,6,7,9,12,16,17,19,20]
+l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
+l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
+
+# def somme (l1,l2) :
+#     resultat = []
+#     for i in range(0,len(l1)) :
+#         resultat.append(l1[i] + l2[i])
+
+#     return resultat
+
+# def prog() :
+#     resu = moyenne(l3)
+#     print("la somme de la liste est :",resu)
+#     print("La somme est",somme(l,l1))
+
+# prog()
+
+# QUESTION C :
+ 
+def somme (l1,l2) :
+    resultat = []
+    for i in range(0,len(l1)) :
+        resultat.append(l1[i] + l2[i])
+
+    return resultat
+
+def doublon(liste) :
+    listeresu = []
+    for i in liste :
+        if i not in listeresu :
+            listeresu.append(i)
+
+    return listeresu
+
+def prog() :
+    resu = moyenne(l3)
+    print("la somme de la liste est :",resu)
+    print("La somme est",somme(l,l1))
+
+
+          
+          
 
 
           
