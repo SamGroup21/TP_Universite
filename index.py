@@ -1,28 +1,42 @@
 # TD 1 Exercices1
 
-def main() :
+# def main() :
 
 
 
-    nombre =  int(input("saisir la valeur "))
-    if nombre != 0 :
-        carre = nombre*nombre
-        carre = (carre*10) + 25
-        return carre
+#     nombre =  int(input("saisir la valeur "))
+#     if nombre != 0 :
+#         carre = nombre*nombre
+#         carre = (carre*10) + 25
+#         return carre
 
-    else :
-        print("imposssible")
+#     else :
+#         print("imposssible")
     
 
-if __name__=="__main__":
-        resultat = main()
+# if __name__=="__main__":
+#         resultat = main()
 
-print(resultat)
+# print(resultat)
 
 # A: oui son resultat est exacte
 # B Non elle n'a pas raison car deja partant de notre exemple on a pris 2 et on a obtenu 65 qui est impaire ensuite on ne peut pas 
 # trouver une valeur paire car à chaque fois on a addtioner 25 a la valeur trouver apres la multipplication par 10
 # C : Oui c'est vrai parceque le carre d'un nombre;que ça soit positive ou negatif est toujours positive
+
+# D : 
+
+# def square(a: float) -> float:
+#     return a * a
+
+# def calculer(x: float) -> float:
+#     resultat = square(x) * 10 + 25
+#     return resultat
+
+# # Programme principal
+# nombre = float(input("Entrez un nombre : "))
+# resultat = calculer(nombre)
+# print("Le résultat est :", resultat)
 
 
  
@@ -93,6 +107,57 @@ print(resultat)
 
 
 # progr()
+
+
+
+
+# TD 5 EXERCICE 2 :
+
+listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
+listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# Question A :
+
+# def nombre_occ_T(n,l) :
+#      cpt= 0
+#      for i in l :
+#           if(i == n) :
+#                cpt = cpt +1
+#      return cpt   
+
+# def prog() : 
+#      nbr = int(input("saisir le nombre\n"))
+#      resu = nombre_occ_T(nbr,12) 
+#      print("le nombre d'occurence de",nbr,"dans la liste trie est :",resu)
+
+
+# QUESTION C : 
+
+def nombre_min_max(l) :
+     max = l[0]
+     min = l[0]
+     for i in l :
+          if(i>max) : 
+               max = l
+          if(i<min) :
+               min = l
+     return min,max
+
+def prog(l) : 
+     min,max = nombre_min_max(l) 
+     print("le nombre mini est",min,"le nombre maxi est:",max)
+
+prog()
+
+
+          
+
+
+
+
+
+
+
 
 
 
