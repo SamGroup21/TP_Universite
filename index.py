@@ -152,13 +152,13 @@ listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
 # EXERCICE 3 
 # QUESTION A :
 
-def moyenne(liste: list) :
-     somme = 0
-     for i in listeTest :
-          somme = somme + i
-          i = i + 1
+# def moyenne(liste: list) :
+#      somme = 0
+#      for i in listeTest :
+#           somme = somme + i
+#           i = i + 1
 
-     return somme/len(listeTest)
+#      return somme/len(listeTest)
 
 # def prog():
 #      resu = moyenne(listeTest)
@@ -169,10 +169,10 @@ def moyenne(liste: list) :
 
 # QUESTION B :
 
-l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
-l1 = [1,3,5,6,7,9,12,16,17,19,20]
-l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
-l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
+# l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# l1 = [1,3,5,6,7,9,12,16,17,19,20]
+# l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
+# l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
 
 # def somme (l1,l2) :
 #     resultat = []
@@ -190,25 +190,110 @@ l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
 
 # QUESTION C :
  
-def somme (l1,l2) :
-    resultat = []
-    for i in range(0,len(l1)) :
-        resultat.append(l1[i] + l2[i])
+# def somme (l1,l2) :
+#     resultat = []
+#     for i in range(0,len(l1)) :
+#         resultat.append(l1[i] + l2[i])
 
-    return resultat
+#     return resultat
 
-def doublon(liste) :
-    listeresu = []
-    for i in liste :
-        if i not in listeresu :
-            listeresu.append(i)
+# def doublon(liste) :
+#     listeresu = []
+#     for i in liste :
+#         if i not in listeresu :
+#             listeresu.append(i)
 
-    return listeresu
+#     return listeresu
+
+# def prog() :
+#     resu = moyenne(l3)
+#     print("la somme de la liste est :",resu)
+#     print("La somme est",somme(l,l1))
+
+# prog()
+
+# QUESTION D :
+
+# l1 = [1,3,5,6,7,9,12,16,17,19,20,25,36,12,6,4]
+# l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
+
+# def elt_commun(l1,l2) :
+#     liste_commun = []
+#     for i in l1 :
+#         if i in l2 :
+#             liste_commun.append(i)
+  
+#     return liste_commun
+
+# def prog() :
+#     resu = elt_commun(l1,l2)
+#     print("La liste commun entre les deux lign est",resu)
+
+# prog()  
+
+# ou encore :
+# l1 = [1, 3, 5, 6, 7, 9, 12, 16, 17, 19, 20, 25, 36, 12, 6, 4]
+# l2 = [12, 52, 15, 25, 36, 98, 45, 5, 6, 5, 66, 56, 56, 4, 6]
+
+
+# def elt_commun():
+#     liste_commun = []
+
+#     for i in l1:
+#         for j in l2:
+#             if i == j:
+#                 liste_commun.append(i)
+
+#     return liste_commun
+
+
+# def prog():
+#     resu = elt_commun()
+#     print("La liste des éléments communs entre les deux listes et :", resu)
+
+
+# prog()
+
+# TD 6 EXERCICE 1 : 
+
+# QUESTION A :
+
+etudiants = {
+     "nom": "Niyonkuru", "prenom": "David",
+     "nom": "Irakoze", "prenom": "Aline",
+     "nom": "Nkurunziza", "prenom": "Kevin",
+     "nom": "Hakizimana", "prenom": "Samuel",
+     "nom": "Uwimana", "prenom": "Grace"
+}
+
+def note_etudiant() :
+    for etudiant in etudiants:
+        nom = etudiant["nom"]
+        prenom = etudiant["pernom"]
+        note = int(input(f"saisir les note du {nom},{prenom}"))
+        etudiants["note"] = note
+
+    return etudiants
+
+   
 
 def prog() :
-    resu = moyenne(l3)
-    print("la somme de la liste est :",resu)
-    print("La somme est",somme(l,l1))
+    resu = note_etudiant()
+    print(resu)
+
+prog()
+
+
+
+    
+
+
+
+
+        
+
+
+
 
 
           
