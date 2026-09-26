@@ -38,7 +38,28 @@
 # resultat = calculer(nombre)
 # print("Le résultat est :", resultat)
 
+# Exercice 2 :
+    
+def addition(a: float, b: float) -> float:
+    a_saisi = input("saisir la valeur de a : ")
+    b_saisi = input("saisir la valeur de b : ")
+    if len(a_saisi) < 2 or len(b_saisi) < 2:
+        print("impossible de calculer la somme car la valeur de a ou b est inferieur a 2")
+    else:
+        a = float(a_saisi)
+        b = float(b_saisi)
+        return a + b
 
+def resultat(a, b):
+    resu = addition(a, b)
+    print('a=', a, 'b=', b, 'le resultat :', resu)
+    return resu
+
+print(resultat())
+    
+    
+ 
+ 
  
 #  CHERCHER LA LISTE TRIE ET LA LISTE NON TRIE
 
@@ -258,30 +279,30 @@ listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
 
 # QUESTION A :
 
-etudiants = {
-     "nom": "Niyonkuru", "prenom": "David",
-     "nom": "Irakoze", "prenom": "Aline",
-     "nom": "Nkurunziza", "prenom": "Kevin",
-     "nom": "Hakizimana", "prenom": "Samuel",
-     "nom": "Uwimana", "prenom": "Grace"
-}
+# etudiants = {
+#      "nom": "Niyonkuru", "prenom": "David",
+#      "nom": "Irakoze", "prenom": "Aline",
+#      "nom": "Nkurunziza", "prenom": "Kevin",
+#      "nom": "Hakizimana", "prenom": "Samuel",
+#      "nom": "Uwimana", "prenom": "Grace"
+# }
 
-def note_etudiant() :
-    for etudiant in etudiants:
-        nom = etudiant["nom"]
-        prenom = etudiant["pernom"]
-        note = int(input(f"saisir les note du {nom},{prenom}"))
-        etudiants["note"] = note
+# def note_etudiant() :
+#     for etudiant in etudiants:
+#         nom = etudiant["nom"]
+#         prenom = etudiant["pernom"]
+#         note = int(input(f"saisir les note du {nom},{prenom}"))
+#         etudiants["note"] = note
 
-    return etudiants
+#     return etudiants
 
    
 
-def prog() :
-    resu = note_etudiant()
-    print(resu)
+# def prog() :
+#     resu = note_etudiant()
+#     print(resu)
 
-prog()
+# prog()
 
 
 
