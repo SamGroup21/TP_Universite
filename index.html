@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html data-theme="light" lang="fr"><head>
+<html data-theme="dark" lang="fr"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Découverte de Maubeuge - Présentation des organisations locales SAM Groupe et Afritech dans le cadre de la SAE 1.06 BUT Informatique." name="description"/>
@@ -12,15 +12,17 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<!-- ========================================================================
-       1. EN-TÊTE DU SITE & NAVIGATION (5 ONGLETS)
-       Header lumineux, navigation moderne avec rose d'accentuation
-       ======================================================================== -->
+       <!-- 1. EN-TÊTE DU SITE & NAVIGATION (5 ONGLETS)
+       Header lumineux, navigation moderne avec rose d'accentuation -->
+
 <header class="site-header" role="banner">
 <div class="container header-content">
 <!-- Logo et Identité de Maubeuge -->
 <a class="brand" href="index.html" title="Retour à l'accueil du projet Maubeuge">
-<img alt="Maubeuge Ville d'Avenir &amp; Innovation" class="brand-logo-img" src="https://lh3.googleusercontent.com/aida/AEtjO1X5RTWrsyd102pno-jN6B5_I6Tp8a9tUTyUJq0KizQedSLE-_Dzr3JhCFpM3skNn2s5SJTXrpesSbuf_YOPPXI10KfAncbkkU1bhTijDj6Gk5EzFzkjUKdF3xR4kv6hewzP0eJ4W4LXULa9g23auSQz6AAUrnmE1B6NmEC7SmGbiy7_COD8bszgfVTYaEptf1GZAqaB3L2bg6j4Hs1NlvopNVUktw_JuqV3m6QNJTRNzT-9xUXrITKPHfg"/>
+
+<!-- A REVENIR SUR LE LOGO  -->
+
+<img alt="Maubeuge &amp; Innovation" class="brand-logo-img" src=""/>
 </a>
 <!-- Navigation Horizontale vers les 5 Onglets -->
 <nav aria-label="Navigation principale" class="main-nav" id="site-nav" role="navigation">
@@ -53,11 +55,12 @@
 </div>
 </div>
 </header>
-<!-- ========================================================================
+<!-- 
        2. CONTENU PRINCIPAL (MAIN)
        Hero Panoramique avec photo Maubeuge en fond + Section Intro + Deux Cartes
-       ======================================================================== -->
+    
 <main id="main-content" role="main">
+
 <!-- HERO PANORAMIQUE AVEC IMAGE DE MAUBEUGE EN FOND RÉEL -->
 <section aria-labelledby="hero-title" class="hero-panoramic">
 <div class="hero-overlay">
@@ -65,13 +68,13 @@
 <div class="hero-inner">
 <div class="hero-badge">
 <span aria-hidden="true" class="hero-badge-dot"></span>
-<span>SAE 1.06 • BUT Informatique — IUT de Maubeuge</span>
+<span>SAE 1.06 • BUT Informatique — BUT-Informatique</span>
 </div>
 <h1 class="hero-title" id="hero-title">
-              Les organisations qui font <span class="highlight-rose">vivre Maubeuge</span>
+              Les organisations qui  <span class="highlight-rose">Travaille à Maubeuge</span>
 </h1>
 <p class="hero-description">
-              Découvrez deux organisations qui participent à l’activité et au dynamisme du territoire maubeugeois.
+              Découvrez deux organisations qui participent à l’activité et au service du territoire maubeugeois.
             </p>
 </div>
 </div>
@@ -96,10 +99,10 @@
           Fiches descriptives des deux organisations partenaires
         </h2>
 <div class="organizations-grid">
-<!-- ===============================================================
-               ORGANISATION 1 : SAM GROUPE
-               Architecture : Identité, Missions, Carte Impact Visuelle avec Photo
-               =============================================================== -->
+
+               <!-- ORGANISATION 1 : SAM GROUPE
+               Architecture : Identité, Missions, Carte Impact Visuelle avec Photo -->
+              
 <article aria-labelledby="sam-title" class="organization-card">
 <!-- Ruban mention explicite Démonstration -->
 <div class="demo-ribbon">
@@ -224,10 +227,10 @@
 </a>
 </footer>
 </article>
-<!-- ===============================================================
-               ORGANISATION 2 : AFRITECH
-               Architecture : Identité, Missions, Carte Impact Visuelle avec Photo
-               =============================================================== -->
+
+               <!-- ORGANISATION 2 : AFRITECH
+               Architecture : Identité, Missions, Carte Impact Visuelle avec Photo -->
+              
 <article aria-labelledby="afritech-title" class="organization-card">
 <!-- Ruban mention explicite Démonstration -->
 <div class="demo-ribbon">
@@ -356,10 +359,10 @@
 </div>
 </section>
 </main>
-<!-- ========================================================================
-       3. PIED DE PAGE DU SITE (FOOTER)
-       Cadre académique BUT Informatique, mentions SAE 1.06 et plan du site.
-       ======================================================================== -->
+
+       <!-- 3. PIED DE PAGE DU SITE (FOOTER)
+       Cadre académique BUT Informatique, mentions SAE 1.06 et plan du site. -->
+       
 <footer class="site-footer" role="contentinfo">
 <div class="container">
 <div class="footer-grid">
@@ -406,8 +409,8 @@
       const themeToggleIcon = document.getElementById('theme-toggle-icon');
       const rootHtml = document.documentElement;
 
-      // Par défaut : mode CLAIR ('light')
-      const savedTheme = localStorage.getItem('theme') || 'light';
+      // Par défaut : thème sombre pour cette page
+      const savedTheme = localStorage.getItem('theme') || 'dark';
       rootHtml.setAttribute('data-theme', savedTheme);
       updateToggleIcon(savedTheme);
 
