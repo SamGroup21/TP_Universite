@@ -83,18 +83,22 @@
 
 # print(euro(108))
 
-# question 2 :
+# Question 2 :
 # a :
 # a,b,s,r :  reel
 # r = a 
 # s= 0
-# tant que r-b>= b :
-#    r= r+1
+# tant que r > =b :
+#    r = r - b
 #    s = s +1
+
+# a : pour trouver le quotient il suffit de predre le dividende moin le divideur et compte  le nombre de fois on a fait cette operation
+# b : pour trouver le reste on regarde a le resultat de la dernier operation de r = r - b
 
 #  retourne s, r 
 
-def division(a, b):
+# c :
+def de(a, b):
     q = 0
     r = a
     while r >= b:
@@ -102,7 +106,13 @@ def division(a, b):
         q = q + 1
     return q, r
 
-print(division(10,3))
+print(de(10,3))
+
+# Question 3 :
+
+
+
+
 
 
 
