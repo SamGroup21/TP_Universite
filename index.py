@@ -268,6 +268,7 @@ listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
 #     return liste_commun
 
 
+
 # def prog():
 #     resu = elt_commun()
 #     print("La liste des éléments communs entre les deux listes et :", resu)
