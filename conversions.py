@@ -1,6 +1,9 @@
 '''
 @author FIL - FST - Univ. Lille
 '''
+from tkinter.messagebox import QUESTION
+
+
 def integer_to_digit(integer):
     '''
     Convert an integer in a hexadecimal digit
@@ -499,18 +502,18 @@ def change_a_bit_in_float(value, bit_position):
 
 # Quand n est entre 0 et 9 :
 
-print(chr(ord('0')+1))
-print(chr(ord('0')+2))
-print(chr(ord('0')+3))
+# print(chr(ord('0')+1))
+# print(chr(ord('0')+2))
+# print(chr(ord('0')+3))
 # ..
 # .
 # .
 # .
-print(chr(ord('0')+9))
+# print(chr(ord('0')+9))
 
 # Quand n>= 10 :
 
-print(chr(ord('0')+10)) 
+# print(chr(ord('0')+10)) 
 # .
 # .
 # .
@@ -518,7 +521,41 @@ print(chr(ord('0')+10))
 # print(chr(ord('0')+n))
 
 
-# QUESTION 4 :
+# QUESTION 4 : 
+# 10 <= n <= 15
+
+# chr(ord('A') + n - 10)
+
+# QUESTION 5 : 
+
+def integer_to_digit(n):
+    """
+    Renvoie le caractère hexadécimal correspondant à un entier n compris entre 0 et 15.
+
+    >>> integer_to_digit(15)
+    'F'
+    >>> integer_to_digit(0)
+    '0'
+    >>> integer_to_digit(9)
+    '9'
+    >>> integer_to_digit(10)
+    'A'
+    """
+    assert 0 <= n <= 15, "n doit être compris entre 0 et 15"
+    if n < 10:
+        return chr(ord('0') + n)
+    else:
+        return chr(ord('A') + n - 10)
+    
+print(integer_to_digit(14))
+    
+    
+    
+
+
+
+
+
 
 
 
