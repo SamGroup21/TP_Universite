@@ -56,10 +56,19 @@ def resultat(a, b):
     return resu
 
 print(resultat())
+
+# Question B : 
+
+
+
     
     
  
  
+
+
+
+
  
 #  CHERCHER LA LISTE TRIE ET LA LISTE NON TRIE
 
