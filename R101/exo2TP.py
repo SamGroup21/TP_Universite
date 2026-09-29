@@ -49,7 +49,7 @@ from random import randint
 # # EXERCICE 5 :
 
 # def devinerNombre():
-#     print("Pensez à un nombre entre 1 et 99...")
+#     print("Pensez à un nombre entre 1 et 99")
 #     bas = 1
 #     haut = 99
 #     coups = 0
@@ -70,17 +70,19 @@ from random import randint
            
 #             haut = proposition - 1
 #         elif reponse == 3:
-#             print(f"\n🎉 J'ai gagné ! J'ai trouvé votre nombre en {coups} coups.")
+#             print(f"\n J'ai gagné ! J'ai trouvé votre nombre en {coups} coups.")
 #             trouve = True
 #         else:
-#             print("❌ Réponse invalide. Veuillez entrer 1, 2 ou 3.")
+#             print(" Réponse invalide. Veuillez entrer 1, 2 ou 3.")
 #             coups -= 1  
 
 #     if not trouve:
 #         print("\n🤔 Attendez, il y a une contradiction dans vos réponses !")
 
 # if __name__ == "__main__":
-#     devinerNombre()
+#     devinerNombre()  
+
+# OU ENCORE :
 
 def devinerNombre():
     print("Pensez à un nombre entre 1 et 99...")
