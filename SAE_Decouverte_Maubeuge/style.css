@@ -227,7 +227,11 @@ a {
     width: 100%;
     height: 100%;
     background-size: cover;
+<<<<<<< Updated upstream
     background-position: center 52%;
+=======
+    background-position: center;
+>>>>>>> Stashed changes
     opacity: 0;
     transform: scale(1.04);
     transition: opacity 1.2s ease-in-out, transform 5s ease-out
@@ -238,6 +242,7 @@ a {
     }
 /* Images nettes et représentatives du patrimoine, architectures et Sambre à Maubeuge */
 .slide-1 {
+<<<<<<< Updated upstream
     background-image: url('./photo/ville_maubeuge_centre.jpeg');
     background-position: center 52%;
     }
@@ -248,6 +253,15 @@ a {
 .slide-3 {
     background-image: url('./photo/Gare_maubeuge.jpeg');
     background-position: center 52%;
+=======
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC77KSeAtYZR35BHbON33NPwcNCADFuXVAs41YNr-QMUV5OeGviQe2Oe5RqiqXOESxj7AxrtIDiK-dupPHGVP5Fxq03Gr2r4Tf9WeoZ4GNbcCTKSRDbAET1VbtZIO_4Yid9aBRy5vMaw836bwXp8QfeaZ6GG0zYf7Dedk9OC99CUytMbG6CrrHSf050XRA692bLm73r7lqAO6LZBg9Q0dh4CWPqgeaARSinfQHcoGYMyUpRdFYoMjZl)
+    }
+.slide-2 {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC986KXLlzapJK49JmBM9psNllM_eqpd-ZvJcXBhnoxrtVGJe7ka51EffMoNOtPQdbX-dtaLfB2_BfRT1svNlC8Y0EuQ7af0Af53R8tdmU1fvW__anj8OPKBq4bhI-56U_FeWCkCieQSSo6_XePrKV2KFxeZ07S6ZEXYk9dfyUFrrvwqa_XaILlXju-LDIHk3f3XaNqSwucXY4rlBYywsuomd0gVj4uLVwj-CLsX9GHlsYKHkYEnSYN)
+    }
+.slide-3 {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA4d2TamLA5LAAvWvTfCah-7mI7NjuL4QXN0N7kqR0cMA7NliP6MeGnDZHobNVxmX6Ty24t-xhotL3srwB9_ZOHdKw92JBAY1jb20LuIezLsVaSCB7_Z4K_nAOySKuLb6IkOzA7gLuJI-2JiliMDKzfzdXGVw_8nTD-U5mWKJmqBcfa5jazsiKb8Ly7nJWJCpx_s2jUdyEUaiHyGvA7dWaPqYJgxcFgUmLGAAYq6LLY1N8QQY6_Ygiu)
+>>>>>>> Stashed changes
     }
 .hero-overlay {
     position: absolute;
@@ -256,7 +270,11 @@ a {
     width: 100%;
     height: 100%;
     z-index: 2;
+<<<<<<< Updated upstream
     background: radial-gradient(circle at center, rgba(11, 15, 23, 0.52) 0%, rgba(11, 15, 23, 0.28) 58%, rgba(11, 15, 23, 0.14) 100%);
+=======
+    background: radial-gradient(circle at center, rgba(11, 15, 23, 0.65) 0%, rgba(11, 15, 23, 0.88) 100%);
+>>>>>>> Stashed changes
     display: flex;
     align-items: center
     }
@@ -875,6 +893,7 @@ a {
         flex-direction: column;
         text-align: center
         }
+<<<<<<< Updated upstream
     }
 /* ACCESSIBILITÉ : PREFERS-REDUCED-MOTION */
 @media (prefers-reduced-motion: reduce) {
@@ -911,3 +930,17 @@ a {
         }
     }
 
+=======
+    }
+/* ACCESSIBILITÉ : PREFERS-REDUCED-MOTION */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important
+        }
+    .pulsing-dot {
+        animation: none
+        }
+    }
+>>>>>>> Stashed changes
