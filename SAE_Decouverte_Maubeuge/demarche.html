@@ -136,6 +136,8 @@ section { padding: 2.5rem 0; }
 .carte ul { padding-left: 1.1rem; color: var(--texte-doux); font-size: .95rem; }
 .carte li { margin-bottom: .35rem; }
 .carte li::marker { color: var(--vert); }
+.apprentissages { grid-column: 1 / -1; }
+.apprentissages ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem 1.5rem; }
 
 /* ============ 6. IDÉES RETENUES ============ */
 .selection {
@@ -208,9 +210,13 @@ footer strong { color: var(--vert-fonce); }
 .carte.reveal.visible:hover { transform: translateY(-4px); }
 
 /* ============ 11. RESPONSIVE ============ */
-@media (max-width: 900px) { .grille { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) {
+  .grille { grid-template-columns: repeat(2, 1fr); }
+  .apprentissages ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 600px) {
   .grille { grid-template-columns: 1fr; }
+  .apprentissages ul { grid-template-columns: 1fr; }
   .hero { padding-top: 2.5rem; }
   .parcours li.relie { width: 14px; }
   /* Tableau transformé en cartes verticales */
@@ -374,6 +380,17 @@ footer strong { color: var(--vert-fonce); }
         <ul>
           <li>Un site léger et écoresponsable</li>
           <li>Un ton simple et accueillant</li>
+        </ul>
+      </article>
+      <article class="carte retenue reveal apprentissages">
+        <h3><span class="icone" aria-hidden="true">💬</span>Apprentissages de l’équipe</h3>
+        <ul>
+          <li><strong>Samuel – Organisations :</strong> J’ai retenu l’importance de bien organiser et présenter les informations.</li>
+          <li><strong>Ahmad – Charte informatique :</strong> J’ai retenu l’importance d’avoir un design cohérent et professionnel.</li>
+          <li><strong>Sofia – Empreinte écologique :</strong> J’ai appris que le numérique a aussi un impact sur l’environnement.</li>
+          <li><strong>Fernande – Empreinte écologique :</strong> J’ai retenu qu’un site peut être optimisé pour réduire son impact écologique.</li>
+          <li><strong>Nathan – Démarche :</strong> J’ai appris qu’une bonne organisation est essentielle pour réussir un projet.</li>
+          <li><strong>Fatoumata – Travail en équipe :</strong> J’ai retenu que la communication et la collaboration sont importantes dans la réussite d’un projet.</li>
         </ul>
       </article>
     </div>
