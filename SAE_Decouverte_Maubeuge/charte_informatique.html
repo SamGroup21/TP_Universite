@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="theme.js"></script>
+    <link href="navigation.css" rel="stylesheet">
 
     <title>Charte informatique - Paprec Energies Maubeuge</title>
 
@@ -1500,9 +1502,21 @@ p {
     }
 }
     </style>
+    <link href="theme.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="theme-page theme-charter">
+
+    <nav aria-label="Navigation principale" class="main-nav">
+        <ul class="nav-list nav-near-center">
+            <li><a class="nav-link" href="index.html">Organisations</a></li>
+            <li><a class="nav-link" href="demarche.html">Démarche</a></li>
+            <li><a class="nav-link" href="empreinte_ecologique.html">Empreinte écologique</a></li>
+            <li><a aria-current="page" class="nav-link actif" href="charte_informatique.html">Charte numérique</a></li>
+            <li><a class="nav-link" href="decouverte_maubeuge.html">Découverte de Maubeuge</a></li>
+        </ul>
+        <button class="site-theme-toggle" data-theme-toggle type="button" aria-label="Passer au mode sombre" aria-pressed="false"><span aria-hidden="true" data-theme-icon>☾</span></button>
+    </nav>
 
     <!-- ================= HEADER ================= -->
 
@@ -1511,7 +1525,7 @@ p {
         <div class="container header-content">
 
             <a href="#" class="logo">
-                <img src="images/PAPREC_Logotype_V_BLACK.jpeg" alt="Logo Paprec">
+                <img src="https://www.paprec.com/app/uploads/2022/03/paprec_logotype_h_rgb_plan-de-travail-1-300x122-1.jpg" alt="Logo Paprec">
             </a>
 
             <div class="header-title">

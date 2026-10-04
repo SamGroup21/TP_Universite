@@ -5,10 +5,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Découverte de Maubeuge - Présentation des organisations locales Refuge Edile Lacroix et Paprec dans le cadre de la SAE 1.06 BUT Informatique." name="description"/>
 <title>Organisations — Découverte de Maubeuge | SAE 1.06 BUT Informatique</title>
+<script src="theme.js"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
+<link href="navigation.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- HEADER & NAVIGATION -->
@@ -28,16 +30,16 @@
 </a>
 <nav aria-label="Navigation principale" class="main-nav" id="site-nav" role="navigation">
 <ul class="nav-list">
-<li><a aria-current="page" class="nav-link active" href="index.html">Organisations</a></li>
+<li><a aria-current="page" class="nav-link active actif" href="index.html">Organisations</a></li>
 <li><a class="nav-link" href="demarche.html">Démarche</a></li>
-<li><a class="nav-link" href="empreinte-ecologique.html">Empreinte écologique</a></li>
+<li><a class="nav-link" href="empreinte_ecologique.html">Empreinte écologique</a></li>
 <li><a class="nav-link" href="charte_informatique.html">Charte numérique</a></li>
 <li><a class="nav-link" href="decouverte_maubeuge.html">Découverte de Maubeuge</a></li>
 </ul>
 </nav>
 <div class="header-actions">
-<button aria-label="Basculer entre thème clair et thème sombre" class="theme-toggle" id="theme-toggle-btn" title="Passer au mode clair" type="button">
-<span aria-hidden="true" id="theme-toggle-icon">☀</span>
+<button aria-label="Basculer entre thème clair et thème sombre" class="theme-toggle" data-theme-toggle id="theme-toggle-btn" title="Passer au mode clair" type="button">
+<span aria-hidden="true" data-theme-icon id="theme-toggle-icon">☀</span>
 </button>
 <button aria-controls="site-nav" aria-expanded="false" aria-label="Ouvrir le menu de navigation" class="mobile-menu-btn" id="mobile-menu-btn" type="button">
 <span aria-hidden="true">☰</span>
@@ -360,7 +362,6 @@ Créé en 1994 à La Courneuve, Paprec est le leader français du recyclage. Le 
 <ul class="footer-nav">
 <li><a href="index.html" style="color: var(--accent-green); font-weight: 700;">● Organisations (active)</a></li>
 <li><a href="demarche.html">Démarche</a></li>
-<li><a href="empreinte-ecologique.html">Empreinte écologique</a></li>
 <li><a href="charte-numerique.html">Charte numérique</a></li>
 <li><a href="decouverte-maubeuge.html">Découverte de Maubeuge</a></li>
 </ul>
@@ -375,36 +376,6 @@ Créé en 1994 à La Courneuve, Paprec est le leader français du recyclage. Le 
 <!-- SCRIPT DE GESTION DU THÈME & DU CARROUSEL -->
 <script>
 (function() {
-  // 1. Commutateur Thème Clair / Thème Sombre
-  const themeToggleBtn = document.getElementById('theme-toggle-btn');
-  const themeToggleIcon = document.getElementById('theme-toggle-icon');
-  const rootHtml = document.documentElement;
-
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  rootHtml.setAttribute('data-theme', savedTheme);
-  updateToggleIcon(savedTheme);
-
-  themeToggleBtn.addEventListener('click', function() {
-    const currentTheme = rootHtml.getAttribute('data-theme');
-    const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    rootHtml.setAttribute('data-theme', nextTheme);
-    localStorage.setItem('theme', nextTheme);
-    updateToggleIcon(nextTheme);
-  });
-
-  function updateToggleIcon(theme) {
-    if (theme === 'dark') {
-      themeToggleIcon.textContent = '☀';
-      themeToggleBtn.setAttribute('title', 'Passer au mode clair');
-      themeToggleBtn.setAttribute('aria-label', 'Passer au mode clair');
-    } else {
-      themeToggleIcon.textContent = '☾';
-      themeToggleBtn.setAttribute('title', 'Passer au mode sombre');
-      themeToggleBtn.setAttribute('aria-label', 'Passer au mode sombre');
-    }
-  }
-
   // 2. Navigation Mobile
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const siteNav = document.getElementById('site-nav');

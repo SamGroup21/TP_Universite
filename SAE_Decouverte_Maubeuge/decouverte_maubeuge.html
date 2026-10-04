@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="theme.js"></script>
 
 <title>Maubeuge - Découverte</title>
 
@@ -728,6 +729,36 @@ footer strong {
     transform: translateY(0);
 }
 
+.main-nav {
+    display: flex;
+    align-items: center
+    }
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center
+    }
+.nav-link {
+    padding: 0.55rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    transition: var(--transition-base)
+    }
+.nav-link:hover {
+    color: var(--accent-green);
+    background-color: var(--accent-green-dim)
+    }
+.nav-link.active {
+    color: #fff;
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    font-weight: 700
+    }
+
 /* =====================================================
    RESPONSIVE
 ===================================================== */
@@ -809,16 +840,29 @@ footer strong {
 }
 
 </style>
+<link href="navigation.css" rel="stylesheet">
+<link href="theme.css" rel="stylesheet">
 </head>
 
 
-<body>
+<body class="theme-page theme-discovery">
+
+<nav aria-label="Navigation principale" class="main-nav" id="site-nav" role="navigation">
+<ul class="nav-list">
+<li><a class="nav-link" href="index.html">Organisations</a></li>
+<li><a class="nav-link" href="demarche.html">Démarche</a></li>
+<li><a class="nav-link" href="empreinte_ecologique.html">Empreinte écologique</a></li>
+<li><a class="nav-link" href="charte_informatique.html">Charte numérique</a></li>
+<li><a aria-current="page" class="nav-link actif" href="decouverte_maubeuge.html">Découverte de Maubeuge</a></li>
+</ul>
+<button class="site-theme-toggle" data-theme-toggle type="button" aria-label="Passer au mode sombre" aria-pressed="false"><span aria-hidden="true" data-theme-icon>☾</span></button>
+</nav>
 
 <!-- =====================================================
      NAVIGATION
 ===================================================== -->
 
-<nav>
+<!-- <nav>
 
     <div class="logo">
         MAUBEUGE<span>.</span>
@@ -857,7 +901,7 @@ footer strong {
 
     </ul>
 
-</nav>
+</nav> -->
 
 
 <!-- =====================================================
