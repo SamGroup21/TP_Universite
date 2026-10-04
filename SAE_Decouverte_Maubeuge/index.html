@@ -112,7 +112,7 @@
 <div class="org-showcase-grid">
 <!-- PANNEAU VISUEL GAUCHE -->
 <div class="org-media-pane">
-<img alt="Animaux protégés au Refuge Edile Lacroix de Maubeuge" class="org-impact-photo" loading="lazy" src="./photo/animaux.jpeg"/>
+<img alt="Animaux protégés au Refuge Edile Lacroix de Maubeuge" class="org-impact-photo" loading="lazy" src="/SAE_Decouverte_Maubeuge/photo/animaux.jpeg"/>
 <div class="org-media-gradient"></div>
 <div class="org-media-floating-badge">
 <span aria-hidden="true">🐾</span>
@@ -142,7 +142,33 @@
 <div>
 <header class="org-header-group">
 <div class="org-logo-frame">
-<img alt="Logo du Refuge Edile Lacroix" class="org-logo-img" src="./photo/logo-refuge.svg"/>
+
+
+<svg aria-label="Refuge Édile Lacroix, association de protection animale"
+     class="org-logo-img" role="img" viewBox="0 0 240 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="100" rx="12" fill="#f0f7f0"/>
+  <circle cx="50" cy="50" r="34" fill="#23834b"/>
+  <g fill="#fff">
+    <ellipse cx="50" cy="57" rx="12" ry="10"/>
+    <circle cx="34" cy="42" r="6"/>
+    <circle cx="45" cy="35" r="6"/>
+    <circle cx="57" cy="35" r="6"/>
+    <circle cx="68" cy="42" r="6"/>
+  </g>
+  <text x="95" y="44" fill="#185c37" font-family="sans-serif"
+        font-size="15" font-weight="700">REFUGE ÉDILE</text>
+  <text x="95" y="65" fill="#185c37" font-family="sans-serif"
+        font-size="15" font-weight="700">LACROIX</text>
+  <text x="95" y="81" fill="#42634d" font-family="sans-serif"
+        font-size="9">PROTECTION ANIMALE</text>
+</svg>
+
+
+
+
+
+
 </div>
 <div class="org-title-area">
 <span class="org-category-pill">🏢 Organisation Territoriale</span>
@@ -200,6 +226,8 @@
 <span><strong>Refuge &amp; accueil d'urgence :</strong> Prise en charge bienveillante des animaux abandonnés ou en situation de détresse.</span>
 </li>
 <li class="org-step-item">
+**Remplacer :** le code du carrousel...
+
 <span class="org-step-num">3</span>
 <span><strong>Sensibilisation citoyenne :</strong> Campagnes d'information et partenariats scolaires pour le respect de la faune locale.</span>
 </li>
@@ -388,64 +416,101 @@ Créé en 1994 à La Courneuve, Paprec est le leader français du recyclage. Le 
     });
   }
 
-  // 3. Carrousel Fluide du Hero (Transitions fondues toutes les 4.5s)
-  const slides = document.querySelectorAll('.hero-slide');
-  const indicators = document.querySelectorAll('.indicator-dot');
-  let currentSlide = 0;
-  let carouselInterval = null;
+  // 3. Carrousel : images locales préchargées et fondu automatique
+const slides = [...document.querySelectorAll('.hero-slide')];
+const indicators = [...document.querySelectorAll('.indicator-dot')];
+const imagePaths = [
+  'photo/ville_maubeuge_centre.jpeg',
+  'photo/rue_maubeuge.jpeg',
+  'photo/Gare_maubeuge.jpeg'
+];
 
-  function showSlide(index) {
-    if (!slides.length) return;
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.setAttribute('aria-hidden', 'false');
-      } else {
-        slide.classList.remove('active');
-        slide.setAttribute('aria-hidden', 'true');
-      }
-    });
+let availableSlides = [];
+let currentSlide = -1;
+let carouselInterval = null;
 
-    indicators.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('active');
-        dot.setAttribute('aria-selected', 'true');
-      } else {
-        dot.classList.remove('active');
-        dot.setAttribute('aria-selected', 'false');
-      }
-    });
+// Neutralise les fonds éventuellement définis dans style.css.
+slides.forEach(slide => {
+  slide.style.setProperty('background-image', 'none', 'important');
+});
 
-    currentSlide = index;
-  }
+function showSlide(index) {
+  if (!availableSlides.includes(index)) return;
 
-  function startCarousel() {
-    stopCarousel();
-    carouselInterval = setInterval(() => {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }, 4500);
-  }
-
-  function stopCarousel() {
-    if (carouselInterval) {
-      clearInterval(carouselInterval);
-    }
-  }
-
-  indicators.forEach(dot => {
-    dot.addEventListener('click', function() {
-      const target = parseInt(this.getAttribute('data-slide'), 10);
-      showSlide(target);
-      startCarousel(); // Réinitialise l'intervalle après interaction
-    });
+  slides.forEach((slide, i) => {
+    const active = i === index;
+    slide.classList.toggle('active', active);
+    slide.setAttribute('aria-hidden', String(!active));
   });
 
-  // Démarre uniquement si l'utilisateur ne privilégie pas les mouvements réduits
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReduced && slides.length > 1) {
-    startCarousel();
+  indicators.forEach((dot, i) => {
+    const active = i === index;
+    dot.classList.toggle('active', active);
+    dot.setAttribute('aria-selected', String(active));
+    dot.disabled = !availableSlides.includes(i);
+  });
+
+  currentSlide = index;
+}
+
+function stopCarousel() {
+  if (carouselInterval !== null) {
+    clearInterval(carouselInterval);
+    carouselInterval = null;
   }
+}
+
+function startCarousel() {
+  stopCarousel();
+  if (availableSlides.length < 2) return;
+
+  carouselInterval = setInterval(() => {
+    const position = availableSlides.indexOf(currentSlide);
+    showSlide(availableSlides[(position + 1) % availableSlides.length]);
+  }, 2500);
+}
+
+indicators.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const index = Number(dot.dataset.slide);
+    if (!availableSlides.includes(index)) return;
+    showSlide(index);
+    startCarousel();
+  });
+});
+
+Promise.all(imagePaths.map(path => new Promise(resolve => {
+  const image = new Image();
+  const url = new URL(path, document.baseURI).href;
+
+  image.onload = () => resolve({ path, url, loaded: true });
+  image.onerror = () => resolve({ path, url, loaded: false });
+  image.src = url;
+}))).then(results => {
+  results.forEach(({ path, url, loaded }, index) => {
+    if (!loaded || !slides[index]) {
+      console.error(`Image introuvable ou illisible : ${path}`);
+      return;
+    }
+
+    slides[index].style.setProperty(
+      'background-image',
+      `url("${url}")`,
+      'important'
+    );
+    slides[index].style.backgroundSize = 'cover';
+    slides[index].style.backgroundPosition = 'center';
+    availableSlides.push(index);
+  });
+
+  if (availableSlides.length) {
+    showSlide(availableSlides[0]);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      startCarousel();
+    }
+  }
+});
 
   // 4. Animations : apparition au défilement, compteurs, images de secours
   rootHtml.classList.add('js');
