@@ -306,9 +306,55 @@ afficherTriangle(6)
 
 # FICHE DE TD 4 :
 
+# EXERCICE 1 :
+# QUESTION A :
+
+def puissanceIteratif(x: float, n: int) -> float:
+    resultat = 1
+    for i in range(n):
+        resultat = resultat * x
+    return resultat
+
+print(puissanceIteratif(2, 5))
+
+# QUESTION B:
+
+def puissanceRecursif(x: float, n: int) -> float:
+    if n == 0:
+        return 1
+    else:
+        return x * puissanceRecursif(x, n - 1)
 
 
- 
+print(puissanceRecursif(2, 9)) 
+
+
+def puissanceRapide(x: float, n: int) -> float:
+    if n == 0:
+        return 1
+    elif n % 2 == 0:
+        demi = puissanceRapide(x, n // 2)
+        return demi * demi
+    else:
+        demi = puissanceRapide(x, n // 2)
+        return x * demi * demi
+
+
+print(puissanceRapide(2, 10))
+
+# puissanceRapide est bien plus performant
+
+# EXERCICE 2 :
+
+# QUESTION A :
+
+
+def divise(a: int, b: int) -> bool:
+    return a % b == 0
+
+print(divise(10, 2)) 
+print(divise(10, 3))  
+print(divise(9, 3)) 
 
 
 
