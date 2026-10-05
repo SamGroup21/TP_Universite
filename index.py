@@ -73,288 +73,291 @@
 
 # QUESTION C :
 
-def intercaler(a: int, b: int) -> int:
-    dizaine = a // 10
-    unite = a % 10
-    return dizaine * 1000 + b * 10 + unite
+# def intercaler(a: int, b: int) -> int:
+#     dizaine = a // 10
+#     unite = a % 10
+#     return dizaine * 1000 + b * 10 + unite
 
-def saisieInt(min_val: int, max_val: int) -> int:
-    valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-    while valeur < min_val or valeur > max_val:
-        print("Valeur incorrecte, réessayez.")
-        valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-    return valeur
+# def saisieInt(min_val: int, max_val: int) -> int:
+#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     while valeur < min_val or valeur > max_val:
+#         print("Valeur incorrecte, réessayez.")
+#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     return valeur
 
-# Programme principal
-a = saisieInt(10, 99)
-b = saisieInt(10, 99)
-resultat = intercaler(a, b)
-print("Le résultat est :", resultat)
-
-
-# EXERCICE D :
-def intercaler(a: int, b: int) -> int:
-    dizaine = a // 10
-    unite = a % 10
-    return dizaine * 1000 + b * 10 + unite
-
-def saisieInt(min_val: int, max_val: int) -> int:
-    valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-    while valeur < min_val or valeur > max_val:
-        print("Valeur incorrecte, réessayez.")
-        valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-    return valeur
-
-# Programme principal
-a = saisieInt(10, 99)
-b = saisieInt(10, 99)
-resultat = intercaler(a, b)
-print("Le résultat est :", resultat)
-
-#  FICHE DE TD 2 :
-
-# Exercice 1 :
-
-def valeurAbsolue(x: float) -> float:
-    if x < 0:
-        return -x
-    else:
-        return x
-print(valeurAbsolue(-7.5))  
-print(valeurAbsolue(3.2))  
+# # Programme principal
+# a = saisieInt(10, 99)
+# b = saisieInt(10, 99)
+# resultat = intercaler(a, b)
+# print("Le résultat est :", resultat)
 
 
-# Exercice 2 :
-# QUESTION B :
+# # EXERCICE D :
+# def intercaler(a: int, b: int) -> int:
+#     dizaine = a // 10
+#     unite = a % 10
+#     return dizaine * 1000 + b * 10 + unite
 
-def resoudreEquation(a: float, b: float) -> float:
-    if a == 0:
-        print("Pas de solution unique (a = 0)")
-        return None
-    else:
-        x = -b / a
-        return x
+# def saisieInt(min_val: int, max_val: int) -> int:
+#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     while valeur < min_val or valeur > max_val:
+#         print("Valeur incorrecte, réessayez.")
+#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     return valeur
+
+# # Programme principal
+# a = saisieInt(10, 99)
+# b = saisieInt(10, 99)
+# resultat = intercaler(a, b)
+# print("Le résultat est :", resultat)
+
+# #  FICHE DE TD 2 :
+
+# # Exercice 1 :
+
+# def valeurAbsolue(x: float) -> float:
+#     if x < 0:
+#         return -x
+#     else:
+#         return x
+# print(valeurAbsolue(-7.5))  
+# print(valeurAbsolue(3.2))  
+
+
+# # Exercice 2 :
+# # QUESTION B :
+
+# def resoudreEquation(a: float, b: float) -> float:
+#     if a == 0:
+#         print("Pas de solution unique (a = 0)")
+#         return None
+#     else:
+#         x = -b / a
+#         return x
     
     
-# QUESTION C :
+# # QUESTION C :
 
-def resoudreEquationSecondDegre(a: float, b: float, c: float):
-    delta = b * b - 4 * a * c
+# def resoudreEquationSecondDegre(a: float, b: float, c: float):
+#     delta = b * b - 4 * a * c
 
-    if delta > 0:
-        x1 = (-b - delta ** 0.5) / (2 * a)
-        x2 = (-b + delta ** 0.5) / (2 * a)
-        print("Deux solutions :", x1, x2)
-        return x1, x2
-    elif delta == 0:
-        x0 = -b / (2 * a)
-        print("Une solution double :", x0)
-        return x0
-    else:
-        print("Pas de solution réelle")
-        return None
-
-
-resoudreEquationSecondDegre(1, -3, 2)  
-resoudreEquationSecondDegre(1, 2, 1)  
-resoudreEquationSecondDegre(1, 0, 1) 
-
-# OU ENCORE :
-
-from math import sqrt, pow
-
-def resoudreEquationSecondDegre(a: float, b: float, c: float):
-    delta = pow(b, 2) - 4 * a * c
-
-    if delta > 0:
-        x1 = (-b - sqrt(delta)) / (2 * a)
-        x2 = (-b + sqrt(delta)) / (2 * a)
-        print("Deux solutions :", x1, x2)
-        return x1, x2
-    elif delta == 0:
-        x0 = -b / (2 * a)
-        print("Une solution double :", x0)
-        return x0
-    else:
-        print("Pas de solution réelle")
-        return None
-
-resoudreEquationSecondDegre(5, -3, 6) 
-resoudreEquationSecondDegre(2, 2, 1)
-resoudreEquationSecondDegre(1, 0, 1)
+#     if delta > 0:
+#         x1 = (-b - delta ** 0.5) / (2 * a)
+#         x2 = (-b + delta ** 0.5) / (2 * a)
+#         print("Deux solutions :", x1, x2)
+#         return x1, x2
+#     elif delta == 0:
+#         x0 = -b / (2 * a)
+#         print("Une solution double :", x0)
+#         return x0
+#     else:
+#         print("Pas de solution réelle")
+#         return None
 
 
-from math import sqrt, pow
+# resoudreEquationSecondDegre(1, -3, 2)  
+# resoudreEquationSecondDegre(1, 2, 1)  
+# resoudreEquationSecondDegre(1, 0, 1) 
 
-def resoudreEquationSecondDegre(a: float, b: float, c: float):
-    delta = pow(b, 2) - 4 * a * c
+# # OU ENCORE :
 
-    if delta > 0:
-        x1 = (-b - sqrt(delta)) / (2 * a)
-        x2 = (-b + sqrt(delta)) / (2 * a)
-        print("Deux solutions :", x1, x2)
-        return x1, x2
-    elif delta == 0:
-        x0 = -b / (2 * a)
-        print("Une solution double :", x0)
-        return x0
-    else:
-        print("Pas de solution réelle")
-        return None
+# from math import sqrt, pow
 
-print("Résolution de a*x^2 + b*x + c = 0")
-a = float(input("Entrez a : "))
-b = float(input("Entrez b : "))
-c = float(input("Entrez c : "))
+# def resoudreEquationSecondDegre(a: float, b: float, c: float):
+#     delta = pow(b, 2) - 4 * a * c
 
-resoudreEquationSecondDegre(a, b, c)
+#     if delta > 0:
+#         x1 = (-b - sqrt(delta)) / (2 * a)
+#         x2 = (-b + sqrt(delta)) / (2 * a)
+#         print("Deux solutions :", x1, x2)
+#         return x1, x2
+#     elif delta == 0:
+#         x0 = -b / (2 * a)
+#         print("Une solution double :", x0)
+#         return x0
+#     else:
+#         print("Pas de solution réelle")
+#         return None
+
+# resoudreEquationSecondDegre(5, -3, 6) 
+# resoudreEquationSecondDegre(2, 2, 1)
+# resoudreEquationSecondDegre(1, 0, 1)
 
 
-# EXERCICE 3 :
+# from math import sqrt, pow
 
-# QUESTION A :
+# def resoudreEquationSecondDegre(a: float, b: float, c: float):
+#     delta = pow(b, 2) - 4 * a * c
 
-def estEquilateral(a: float, b: float, c: float) -> bool:
-    if a == b and b == c:
-        return True
-    else:
-        return False
+#     if delta > 0:
+#         x1 = (-b - sqrt(delta)) / (2 * a)
+#         x2 = (-b + sqrt(delta)) / (2 * a)
+#         print("Deux solutions :", x1, x2)
+#         return x1, x2
+#     elif delta == 0:
+#         x0 = -b / (2 * a)
+#         print("Une solution double :", x0)
+#         return x0
+#     else:
+#         print("Pas de solution réelle")
+#         return None
 
-print(estEquilateral(5, 5, 5))  
-print(estEquilateral(3, 4, 5)) 
+# print("Résolution de a*x^2 + b*x + c = 0")
+# a = float(input("Entrez a : "))
+# b = float(input("Entrez b : "))
+# c = float(input("Entrez c : "))
 
-# QUESTION B :
+# resoudreEquationSecondDegre(a, b, c)
 
-def estIsocele(a: float, b: float, c: float) -> bool:
-    if a == b or b == c or a == c:
-        return True
-    else:
-        return False
 
-print(estIsocele(7, 5, 8))  
-print(estIsocele(9, 4, 2))  
+# # EXERCICE 3 :
 
-# QUESTION C :
+# # QUESTION A :
 
-def estRectangle(a: float, b: float, c: float) -> bool:
+# def estEquilateral(a: float, b: float, c: float) -> bool:
+#     if a == b and b == c:
+#         return True
+#     else:
+#         return False
 
-    if a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b:
-        return True
-    else:
-        return False
+# print(estEquilateral(5, 5, 5))  
+# print(estEquilateral(3, 4, 5)) 
 
-# Tests
-print(estRectangle(3, 4, 5))
-print(estRectangle(2, 2, 2))  
+# # QUESTION B :
 
-# QUESTION D :
+# def estIsocele(a: float, b: float, c: float) -> bool:
+#     if a == b or b == c or a == c:
+#         return True
+#     else:
+#         return False
 
-def estEquilateral(a: float, b: float, c: float) -> bool:
-    return a == b and b == c
+# print(estIsocele(7, 5, 8))  
+# print(estIsocele(9, 4, 2))  
 
-def estRectangle(a: float, b: float, c: float) -> bool:
-    return (a*a == b*b + c*c or
-            b*b == a*a + c*c or
-            c*c == a*a + b*b)
+# # QUESTION C :
 
-def estIsocele(a: float, b: float, c: float) -> bool:
-    return a == b or b == c or a == c
+# def estRectangle(a: float, b: float, c: float) -> bool:
 
-# Programme principal
-a = float(input("Entrez le côté a : "))
-b = float(input("Entrez le côté b : "))
-c = float(input("Entrez le côté c : "))
+#     if a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b:
+#         return True
+#     else:
+#         return False
 
-if estEquilateral(a, b, c):
-    print("Le triangle est équilatéral")
-elif estRectangle(a, b, c):
-    print("Le triangle est rectangle")
-elif estIsocele(a, b, c):
-    print("Le triangle est isocèle")
-else:
-    print("Le triangle est quelconque")
+# # Tests
+# print(estRectangle(3, 4, 5))
+# print(estRectangle(2, 2, 2))  
+
+# # QUESTION D :
+
+# def estEquilateral(a: float, b: float, c: float) -> bool:
+#     return a == b and b == c
+
+# def estRectangle(a: float, b: float, c: float) -> bool:
+#     return (a*a == b*b + c*c or
+#             b*b == a*a + c*c or
+#             c*c == a*a + b*b)
+
+# def estIsocele(a: float, b: float, c: float) -> bool:
+#     return a == b or b == c or a == c
+
+# # Programme principal
+# a = float(input("Entrez le côté a : "))
+# b = float(input("Entrez le côté b : "))
+# c = float(input("Entrez le côté c : "))
+
+# if estEquilateral(a, b, c):
+#     print("Le triangle est équilatéral")
+# elif estRectangle(a, b, c):
+#     print("Le triangle est rectangle")
+# elif estIsocele(a, b, c):
+#     print("Le triangle est isocèle")
+# else:
+#     print("Le triangle est quelconque")
     
     
-# FICHE DE TD 3 :
+# # FICHE DE TD 3 :
 
-# EXERCICE 1 :
+# # EXERCICE 1 :
 
-# Ligne d'en-tête
-print("X", end="\t")
-for j in range(11):
-    print(j, end="\t")
-print()  # retour à la ligne
+# # Ligne d'en-tête
+# print("X", end="\t")
+# for j in range(11):
+#     print(j, end="\t")
+# print()  # retour à la ligne
 
-# Lignes de la table
-for i in range(11):
-    print(i, end="\t")
-    for j in range(11):
-        print(i * j, end="\t")
-    print()  # retour à la ligne après chaque ligne i
+# # Lignes de la table
+# for i in range(11):
+#     print(i, end="\t")
+#     for j in range(11):
+#         print(i * j, end="\t")
+#     print()  # retour à la ligne après chaque ligne i
     
     
-# EXERCICE 2 :
+# # EXERCICE 2 :
     
-def afficherTriangle(c: int):
-    for i in range(1, c + 1):
-        nbEtoiles = c - i + 1
-        nbPoints = i - 1
-        print("*" * nbEtoiles + "." * nbPoints)
+# def afficherTriangle(c: int):
+#     for i in range(1, c + 1):
+#         nbEtoiles = c - i + 1
+#         nbPoints = i - 1
+#         print("*" * nbEtoiles + "." * nbPoints)
 
 
-afficherTriangle(6)
+# afficherTriangle(6)
 
-# FICHE DE TD 4 :
+# # FICHE DE TD 4 :
 
-# EXERCICE 1 :
-# QUESTION A :
+# # EXERCICE 1 :
+# # QUESTION A :
 
-def puissanceIteratif(x: float, n: int) -> float:
-    resultat = 1
-    for i in range(n):
-        resultat = resultat * x
-    return resultat
+# def puissanceIteratif(x: float, n: int) -> float:
+#     resultat = 1
+#     for i in range(n):
+#         resultat = resultat * x
+#     return resultat
 
-print(puissanceIteratif(2, 5))
+# print(puissanceIteratif(2, 5))
 
-# QUESTION B:
+# # QUESTION B:
 
-def puissanceRecursif(x: float, n: int) -> float:
-    if n == 0:
-        return 1
-    else:
-        return x * puissanceRecursif(x, n - 1)
-
-
-print(puissanceRecursif(2, 9)) 
+# def puissanceRecursif(x: float, n: int) -> float:
+#     if n == 0:
+#         return 1
+#     else:
+#         return x * puissanceRecursif(x, n - 1)
 
 
-def puissanceRapide(x: float, n: int) -> float:
-    if n == 0:
-        return 1
-    elif n % 2 == 0:
-        demi = puissanceRapide(x, n // 2)
-        return demi * demi
-    else:
-        demi = puissanceRapide(x, n // 2)
-        return x * demi * demi
+# print(puissanceRecursif(2, 9)) 
 
 
-print(puissanceRapide(2, 10))
+# def puissanceRapide(x: float, n: int) -> float:
+#     if n == 0:
+#         return 1
+#     elif n % 2 == 0:
+#         demi = puissanceRapide(x, n // 2)
+#         return demi * demi
+#     else:
+#         demi = puissanceRapide(x, n // 2)
+#         return x * demi * demi
 
-# puissanceRapide est bien plus performant
 
-# EXERCICE 2 :
+# print(puissanceRapide(2, 10))
 
-# QUESTION A :
+# # puissanceRapide est bien plus performant
+
+# # EXERCICE 2 :
+
+# # QUESTION A :
 
 
-def divise(a: int, b: int) -> bool:
-    return a % b == 0
+# def divise(a: int, b: int) -> bool:
+#     return a % b == 0
 
-print(divise(10, 2)) 
-print(divise(10, 3))  
-print(divise(9, 3)) 
+# print(divise(10, 2)) 
+# print(divise(10, 3))  
+# print(divise(9, 3)) 
+
+
+
 
 
 
@@ -608,13 +611,59 @@ print(divise(9, 3))
 
 #     return etudiants
 
-
-
+r
 # def prog() :
 #     resu = note_etudiant()
 #     print(resu)
 
 # prog()
+
+
+
+# FICHE DE TD 6 :
+
+# EXERCICE 1 :
+
+# QUESTION A :
+
+etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
+{"nom": "Irakoze", "prenom": "Aline"},
+{"nom": "Nkurunziza", "prenom": "Kevin"},
+{"nom": "Hakizimana", "prenom": "Samuel"},
+{"nom": "Uwimana", "prenom": "Grace"}]
+
+def saisiNote(liste) :
+    for i in range(0,len(liste)) :
+        print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
+        note = int(input())
+        liste[i]["note"]= note
+    return liste
+
+def prog() :
+    l1= saisiNote(d)
+    print(l1)
+
+prog()
+
+# QUESTION B :
+
+def meilleur(liste :list)->list :
+    max = 0
+    l=[]
+    for i in range(0,len(liste)) :
+        if(max< liste[i]["note"]) :
+            max = liste[i]["note"]
+
+
+    for i in range(0,len(0,len(liste))) :
+        if (max==liste[i]["note"]) :
+            l.append((liste[i]["nom"],liste[i]["prenom"]))
+
+    return l
+
+def prog() :
+    l2 =meilleur(l1)
+
 
 
 
