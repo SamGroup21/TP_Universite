@@ -611,7 +611,7 @@
 
 #     return etudiants
 
-r
+# r
 # def prog() :
 #     resu = note_etudiant()
 #     print(resu)
@@ -626,45 +626,148 @@ r
 
 # QUESTION A :
 
-etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
-{"nom": "Irakoze", "prenom": "Aline"},
-{"nom": "Nkurunziza", "prenom": "Kevin"},
-{"nom": "Hakizimana", "prenom": "Samuel"},
-{"nom": "Uwimana", "prenom": "Grace"}]
+# etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
+# {"nom": "Irakoze", "prenom": "Aline"},
+# {"nom": "Nkurunziza", "prenom": "Kevin"},
+# {"nom": "Hakizimana", "prenom": "Samuel"},
+# {"nom": "Uwimana", "prenom": "Grace"}]
 
-def saisiNote(liste) :
-    for i in range(0,len(liste)) :
-        print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
-        note = int(input())
-        liste[i]["note"]= note
-    return liste
+# def saisiNote(liste) :
+#     for i in range(0,len(liste)) :
+#         print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
+#         note = int(input())
+#         liste[i]["note"]= note
+#     return liste
 
-def prog() :
-    l1= saisiNote(d)
-    print(l1)
+# def prog() :
+#     l1= saisiNote(d)
+#     print(l1)
 
-prog()
+# prog()
 
 # QUESTION B :
 
-def meilleur(liste :list)->list :
-    max = 0
-    l=[]
-    for i in range(0,len(liste)) :
-        if(max< liste[i]["note"]) :
-            max = liste[i]["note"]
+# def meilleur(liste :list)->list :
+#     max = 0
+#     l=[]
+#     for i in range(0,len(liste)) :
+#         if(max< liste[i]["note"]) :
+#             max = liste[i]["note"]
 
 
-    for i in range(0,len(0,len(liste))) :
-        if (max==liste[i]["note"]) :
-            l.append((liste[i]["nom"],liste[i]["prenom"]))
+#     for i in range(0,len(0,len(liste))) :
+#         if (max==liste[i]["note"]) :
+#             l.append((liste[i]["nom"],liste[i]["prenom"]))
 
-    return l
+#     return l
 
+# def prog() :
+#     l2 =meilleur(l1)
+
+
+# # QUESTION C :
+
+# def noteEtudiant(note:float,listeNote :list) :
+#    listeNote = []
+#    for i in range(0,note) :
+#        while note<20 :
+#         if 0 <=note<= 20 :
+#            if listeNote[i-1]> listeNote[i] :
+#               temps = listeNote[i]
+#               listeNote= listeNote[i-1]
+#            listeNote.append[i]
+
+           
+
+   
+
+
+# FICHE DE TD 7  :
+
+# EXERCICE 1 
+# QUESTION A
+
+# def palindrome(mot) :
+#    if mot[::-1] == mot :
+#       return True
+#    else :
+#       return False
+
+
+# def prog() :
+#    m = input("saisie un mot ")
+#    var =palindrome(m)
+#    if(var==True) :
+#       print(m, "est un palindrome")
+#    else :
+#       print(m , "n est pas un palindrome")
+
+# prog()
+
+# QUESTION B  :
+# pour tester une lettre
+# def compter(s1,s2) :
+#    score = 0
+#    for i in range(len(s1)) :
+#       for j in range(len(s2)) :
+#          if s1[i] == s2[j] :
+#             score = score + 1
+#    return score
+
+# def prog() :
+#    s1 = "Bonjour tout le monde"
+#    s2 = "o"
+#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+
+# prog()
+
+# AUTRE VERSION :
+# pour tester deux lettre
+# def compter(s1,s2) :
+#    score = 0
+#    for i in range(0,len(s2)-len(s1)) :
+#       if(s2[i:len(s1)+i]==s1) :
+#          score = score +1
+
+#       return
+
+# def prog() :
+#    s1 = "Bonjour tout le monde"
+#    s2 = "o"
+#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+
+# prog()
+
+# QUESTION C :
+
+# def voyeur(v) :
+#    l = "aiuoeAIUOE"
+#    score = 0
+#    for i in v:
+#       if i in l:
+#          score = score + 1
+#    return score
+         
+# def prog() :
+#    v = "bonjour je suis etudiant en but"
+#    print("les voyelle sont au nombre de",voyeur(v),"fois")
+
+# prog()
+
+
+def voyeur(v) :
+   score = 0
+   for i in range(len(v)) :
+      if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
+         score = score + 1
+
+      return score
+         
 def prog() :
-    l2 =meilleur(l1)
+   v = "bonjour"
+   print("les voyelle sont au nombre de",voyeur(v),"fois")
 
-
+prog()
 
 
 
