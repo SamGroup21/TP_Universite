@@ -16,18 +16,21 @@
 #         n ← n - 1
 # Renvoyer n
 
-# b :
-# def pe (x) :
-#     n = 0
-#     if x> 0 :
-#         while n + 1 <= x :
-#             n = n + 1
+# fonction python:
 
-#     else :
-#         while n > x :
-#             n = n-1
+        
+        
+        
+        
+    
 
-#     return n
+
+
+
+
+
+
+
 
 # print(pe(-8.5))
 
@@ -98,15 +101,15 @@
 #  retourne s, r 
 
 # c :
-def de(a, b):
-    q = 0
-    r = a
-    while r >= b:
-        r = r - b
-        q = q + 1
-    return q, r
+# def de(a, b):
+#     q = 0
+#     r = a
+#     while r >= b:
+#         r = r - b
+#         q = q + 1
+#     return q, r
 
-print(de(10,3))
+# print(de(10,3))
 
 # Question 3 :
 
