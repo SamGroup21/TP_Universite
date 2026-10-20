@@ -755,19 +755,19 @@
 # prog()
 
 
-def voyeur(v) :
-   score = 0
-   for i in range(len(v)) :
-      if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
-         score = score + 1
+# def voyeur(v) :
+#    score = 0
+#    for i in range(len(v)) :
+#       if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
+#          score = score + 1
 
-      return score
+#       return score
          
-def prog() :
-   v = "bonjour"
-   print("les voyelle sont au nombre de",voyeur(v),"fois")
+# def prog() :
+#    v = "bonjour"
+#    print("les voyelle sont au nombre de",voyeur(v),"fois")
 
-prog()
+# prog()
 
 
 
