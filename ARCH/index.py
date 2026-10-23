@@ -705,6 +705,7 @@
 # prog()
 
 # QUESTION B  :
+
 # pour tester une lettre
 # def compter(s1,s2) :
 #    score = 0
@@ -769,8 +770,93 @@
 
 # prog()
 
+# QUESTION D :
+def miniscule(phrase) :
+    l =[]
+    for i in phrase :
+        if(65<= ord(i) <= 90) :
+            l.append(chr(ord(i)+32))
+        else :
+            l.append(i)
+            
+            
+    resu = ""
+    for i in l :
+        resu = resu +i
+        
+    return resu
+
+def prog() :
+    m = input("Entrer un mot\n")
+    print(miniscule(m))
+# prog()
+        
+# QUESTION E :
+
+def anagramme(str1,str2) :
+    if len (str1) != len(str2) :
+        return False
+    string1 = miniscule(str1) 
+    string2 = miniscule(str2)
+    cpt1 = [0]*26
+    cpt2 = [0]*26
+    for lettre in string1 :
+        if 'a' <= lettre<= 'z' :
+            cpt1[ord(lettre)-ord('a')] += 1
+            
+    for lettre in string2 :
+        if 'a' <= lettre<= 'z' :
+            cpt2[ord(lettre)-ord('a')] += 1
+            
+    print(cpt1)
+    print(cpt2)
+    if(cpt1 == cpt2)  :
+        return True
+    else :
+        return False
+    
+def prog() :
+    if (anagramme("niche","chien")) :
+     print("anagramme")
+        
+    else :
+     print("ce n'est pas un anagramme")
+        
+# prog()
 
 
+
+# QUESION F :
+
+def nombre_indent(phr1,phr2) :
+    cpt = 0
+    for i in phr1 :
+        if i in phr2 :
+            cpt += 1
+    return cpt
+
+def  prog() :
+    phrase1 = "aab"
+    phrase2 = "ac"
+    
+    print("le nomber de lettre commune entre ces deux phrase est",nombre_indent(phrase1,phrase2))           
+
+
+# prog()
+
+# ou encore :
+
+def nombre_indent(phr1,phr2) :
+    cpt = 0
+    for i in phr1 :
+        for j in phr2 :
+            if i == j :
+                cpt += 1
+    return cpt
+
+# print(nombre_indent("aab","ac"))
+
+# FICHE DE TD 8 :
 
 
 
