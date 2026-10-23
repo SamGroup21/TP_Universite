@@ -858,7 +858,18 @@ def nombre_indent(phr1,phr2) :
 
 # FICHE DE TD 8 :
 
+def matrice_nul(cln:list,lgn:list) ->list :
+    res = []
+    liste = []
+    for  i in range(cln) :
+        liste.append(0)
+        for j in range(lgn) :
+            res.append(liste)
+            
+    return res
 
+print(matrice_nul(3,2))
+        
 
 
 
