@@ -687,86 +687,86 @@
 # EXERCICE 1 
 # QUESTION A
 
-# def palindrome(mot) :
-#    if mot[::-1] == mot :
-#       return True
-#    else :
-#       return False
+def palindrome(mot) :
+   if mot[::-1] == mot :
+      return True
+   else :
+      return False
 
 
-# def prog() :
-#    m = input("saisie un mot ")
-#    var =palindrome(m)
-#    if(var==True) :
-#       print(m, "est un palindrome")
-#    else :
-#       print(m , "n est pas un palindrome")
+def prog() :
+   m = input("saisie un mot ")
+   var = palindrome(m)
+   if(var==True) :
+      print(m, "est un palindrome")
+   else :
+      print(m , "n est pas un palindrome")
 
 # prog()
 
 # QUESTION B  :
 
 # pour tester une lettre
-# def compter(s1,s2) :
-#    score = 0
-#    for i in range(len(s1)) :
-#       for j in range(len(s2)) :
-#          if s1[i] == s2[j] :
-#             score = score + 1
-#    return score
+def compter(s1,s2) :
+   score = 0
+   for i in range(len(s1)) :
+      for j in range(len(s2)) :
+         if s1[i] == s2[j] :
+            score = score + 1
+   return score
 
-# def prog() :
-#    s1 = "Bonjour tout le monde"
-#    s2 = "o"
-#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+def prog() :
+   s1 = "Bonjour tout le monde"
+   s2 = "o"
+   print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
 
 # prog()
 
 # AUTRE VERSION :
 # pour tester deux lettre
-# def compter(s1,s2) :
-#    score = 0
-#    for i in range(0,len(s2)-len(s1)) :
-#       if(s2[i:len(s1)+i]==s1) :
-#          score = score +1
+def compter(s1,s2) :
+   score = 0
+   for i in range(0,len(s2)-len(s1)) :
+      if(s2[i:len(s1)+i]==s1) :
+         score = score +1
 
-#       return
+      return score
 
-# def prog() :
-#    s1 = "Bonjour tout le monde"
-#    s2 = "o"
-#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+def prog() :
+   s1 = "Bonjour tout le monde"
+   s2 = "o"
+   print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
 
 # prog()
 
 # QUESTION C :
 
-# def voyeur(v) :
-#    l = "aiuoeAIUOE"
-#    score = 0
-#    for i in v:
-#       if i in l:
-#          score = score + 1
-#    return score
+def voyeur(v) :
+   l = "aiuoeAIUOE"
+   score = 0
+   for i in v:
+      if i in l:
+         score = score + 1
+   return score
          
-# def prog() :
-#    v = "bonjour je suis etudiant en but"
-#    print("les voyelle sont au nombre de",voyeur(v),"fois")
+def prog() :
+   v = "bonjour je suis etudiant en but"
+   print("les voyelle sont au nombre de",voyeur(v),"fois")
 
 # prog()
 
 
-# def voyeur(v) :
-#    score = 0
-#    for i in range(len(v)) :
-#       if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
-#          score = score + 1
+def voyeur(v) :
+   score = 0
+   for i in range(len(v)) :
+      if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
+         score = score + 1
 
-#       return score
+      return score
          
-# def prog() :
-#    v = "bonjour"
-#    print("les voyelle sont au nombre de",voyeur(v),"fois")
+def prog() :
+   v = "bonjour"
+   print("les voyelle sont au nombre de",voyeur(v),"fois")
 
 # prog()
 
@@ -858,7 +858,7 @@ def nombre_indent(phr1,phr2) :
 
 # FICHE DE TD 8 :
 
-def matrice_nul(cln:list,lgn:list) ->list :
+def matrice_nul_carre(cln:list,lgn:list) ->list :
     res = []
     liste = []
     for  i in range(cln) :
@@ -868,27 +868,81 @@ def matrice_nul(cln:list,lgn:list) ->list :
             
     return res
 
-print(matrice_nul(3,2))
+m = (matrice_nul_carre(1,3))
+for i in m :
+  print(m)
         
+# ou encore: 
+
+
+def creer_matrice(lignes,colonnes) :
+    matrice = []
+    l = [0]*lignes
+    for i in range(0,colonnes) :
+        matrice.append(l)
+        
+    return matrice
+
+# QUESTION B :
+def IsIn(v,m) :
+    for i in range(len(m)) :
+        for j in range(len(m[0])) :
+            if m[i][j] == v :
+                return True
+            
+    return False
+    
+    
+def prog() :
+    m = creer_matrice(8,9)
+    for i in m :
+        print(i)
+        matrice=[[1,3,5],[4,5,6],[2,-2,4]]
+        print(IsIn(-2,matrice))
+        
+# prog()
 
 
 
+# ADDITION DE DEUX MATRICE :
+
+def addMat(mA,mB) :
+    mC = creer_matrice(len(mA),len(mA[0])) 
+    for i in range(0,len(mA)) :
+        for j in range(0,len(mA[0])) :
+            mC[i][j] = mA[i][j] +mB[i][j]
+            
+    return mC
+                
+def prog() :
+    
+    a= [[1,2,3],[4,5,6],[2,-2,4]]
+    b = [[9,8,7],[6,5,4],[3,2,1]]
+    print(addMat(a,b))
+
+# print(prog())
+
+
+def  scalaire(nombre :float,mB) :
+     mC = creer_matrice(len(mB),len(mB[0]))
+     for i in range(0,len(mB)) :
+         for j in range(0,len(mB[0])) :
+             mC[i][j] = nombre * mB[i][j]
+             print(mC[i][j])
+             
+             
+     return mC 
 
 
 
+def prog() :
+    #  a= [[1,2,3],[4,5,6],[2,-2,4]]
+     b = [[9,8,7],[6,5,4],[3,2,1]]
+     
+     print(scalaire(11,b))
 
 
-
-
-
-
-
-
-
-
-
-
-
+prog()
 
 
 
