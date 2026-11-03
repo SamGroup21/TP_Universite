@@ -1,878 +1,878 @@
-# TD 1 Exercices1
+# # TD 1 Exercices1
 
-# def main() :
-
-
-
-#     nombre =  int(input("saisir la valeur "))
-#     if nombre != 0 :
-#         carre = nombre*nombre
-#         carre = (carre*10) + 25
-#         return carre
-
-#     else :
-#         print("imposssible")
+# # def main() :
 
 
-# if __name__=="__main__":
-#         resultat = main()
 
-# print(resultat)
+# #     nombre =  int(input("saisir la valeur "))
+# #     if nombre != 0 :
+# #         carre = nombre*nombre
+# #         carre = (carre*10) + 25
+# #         return carre
 
-# A: oui son resultat est exacte
-# B Non elle n'a pas raison car deja partant de notre exemple on a pris 2 et on a obtenu 65 qui est impaire ensuite on ne peut pas
-# trouver une valeur paire car à chaque fois on a addtioner 25 a la valeur trouver apres la multipplication par 10
-# C : Oui c'est vrai parceque le carre d'un nombre;que ça soit positive ou negatif est toujours positive
-
-# D :
-
-# def square(a: float) -> float:
-#     return a * a
-
-# def calculer(x: float) -> float:
-#     resultat = square(x) * 10 + 25
-#     return resultat
-
-# # Programme principal
-# nombre = float(input("Entrez un nombre : "))
-# resultat = calculer(nombre)
-# print("Le résultat est :", resultat)
-
-# Exercice 2 :
-
-# def addition(a: float, b: float) -> float:
-#     a_saisi = input("saisir la valeur de a : ")
-#     b_saisi = input("saisir la valeur de b : ")
-#     if len(a_saisi) < 2 or len(b_saisi) < 2:
-#         print("impossible de calculer la somme car la valeur de a ou b est inferieur a 2")
-#     else:
-#         a = float(a_saisi)
-#         b = float(b_saisi)
-#         return a + b
-
-# def resultat(a, b):
-#     resu = addition(a, b)
-#     print('a=', a, 'b=', b, 'le resultat :', resu)
-#     return resu
-
-# print(resultat())
-
-# Question B :
-
-# def saisieInt(min_val: int, max_val: int) -> int:
-#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     while valeur < min_val or valeur > max_val:
-#         print("Valeur incorrecte, réessayez.")
-#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     return valeur
-
-# # Test
-# n = saisieInt(1, 10)
-# print("Valeur saisie :", n)
+# #     else :
+# #         print("imposssible")
 
 
-# QUESTION C :
+# # if __name__=="__main__":
+# #         resultat = main()
 
-# def intercaler(a: int, b: int) -> int:
-#     dizaine = a // 10
-#     unite = a % 10
-#     return dizaine * 1000 + b * 10 + unite
+# # print(resultat)
 
-# def saisieInt(min_val: int, max_val: int) -> int:
-#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     while valeur < min_val or valeur > max_val:
-#         print("Valeur incorrecte, réessayez.")
-#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     return valeur
+# # A: oui son resultat est exacte
+# # B Non elle n'a pas raison car deja partant de notre exemple on a pris 2 et on a obtenu 65 qui est impaire ensuite on ne peut pas
+# # trouver une valeur paire car à chaque fois on a addtioner 25 a la valeur trouver apres la multipplication par 10
+# # C : Oui c'est vrai parceque le carre d'un nombre;que ça soit positive ou negatif est toujours positive
 
-# # Programme principal
-# a = saisieInt(10, 99)
-# b = saisieInt(10, 99)
-# resultat = intercaler(a, b)
-# print("Le résultat est :", resultat)
+# # D :
 
+# # def square(a: float) -> float:
+# #     return a * a
 
-# # EXERCICE D :
-# def intercaler(a: int, b: int) -> int:
-#     dizaine = a // 10
-#     unite = a % 10
-#     return dizaine * 1000 + b * 10 + unite
+# # def calculer(x: float) -> float:
+# #     resultat = square(x) * 10 + 25
+# #     return resultat
 
-# def saisieInt(min_val: int, max_val: int) -> int:
-#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     while valeur < min_val or valeur > max_val:
-#         print("Valeur incorrecte, réessayez.")
-#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
-#     return valeur
-
-# # Programme principal
-# a = saisieInt(10, 99)
-# b = saisieInt(10, 99)
-# resultat = intercaler(a, b)
-# print("Le résultat est :", resultat)
-
-# #  FICHE DE TD 2 :
-
-# # Exercice 1 :
-
-# def valeurAbsolue(x: float) -> float:
-#     if x < 0:
-#         return -x
-#     else:
-#         return x
-# print(valeurAbsolue(-7.5))  
-# print(valeurAbsolue(3.2))  
-
+# # # Programme principal
+# # nombre = float(input("Entrez un nombre : "))
+# # resultat = calculer(nombre)
+# # print("Le résultat est :", resultat)
 
 # # Exercice 2 :
-# # QUESTION B :
 
-# def resoudreEquation(a: float, b: float) -> float:
-#     if a == 0:
-#         print("Pas de solution unique (a = 0)")
-#         return None
-#     else:
-#         x = -b / a
-#         return x
-    
-    
+# # def addition(a: float, b: float) -> float:
+# #     a_saisi = input("saisir la valeur de a : ")
+# #     b_saisi = input("saisir la valeur de b : ")
+# #     if len(a_saisi) < 2 or len(b_saisi) < 2:
+# #         print("impossible de calculer la somme car la valeur de a ou b est inferieur a 2")
+# #     else:
+# #         a = float(a_saisi)
+# #         b = float(b_saisi)
+# #         return a + b
+
+# # def resultat(a, b):
+# #     resu = addition(a, b)
+# #     print('a=', a, 'b=', b, 'le resultat :', resu)
+# #     return resu
+
+# # print(resultat())
+
+# # Question B :
+
+# # def saisieInt(min_val: int, max_val: int) -> int:
+# #     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     while valeur < min_val or valeur > max_val:
+# #         print("Valeur incorrecte, réessayez.")
+# #         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     return valeur
+
+# # # Test
+# # n = saisieInt(1, 10)
+# # print("Valeur saisie :", n)
+
+
 # # QUESTION C :
 
-# def resoudreEquationSecondDegre(a: float, b: float, c: float):
-#     delta = b * b - 4 * a * c
+# # def intercaler(a: int, b: int) -> int:
+# #     dizaine = a // 10
+# #     unite = a % 10
+# #     return dizaine * 1000 + b * 10 + unite
 
-#     if delta > 0:
-#         x1 = (-b - delta ** 0.5) / (2 * a)
-#         x2 = (-b + delta ** 0.5) / (2 * a)
-#         print("Deux solutions :", x1, x2)
-#         return x1, x2
-#     elif delta == 0:
-#         x0 = -b / (2 * a)
-#         print("Une solution double :", x0)
-#         return x0
-#     else:
-#         print("Pas de solution réelle")
-#         return None
+# # def saisieInt(min_val: int, max_val: int) -> int:
+# #     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     while valeur < min_val or valeur > max_val:
+# #         print("Valeur incorrecte, réessayez.")
+# #         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     return valeur
 
-
-# resoudreEquationSecondDegre(1, -3, 2)  
-# resoudreEquationSecondDegre(1, 2, 1)  
-# resoudreEquationSecondDegre(1, 0, 1) 
-
-# # OU ENCORE :
-
-# from math import sqrt, pow
-
-# def resoudreEquationSecondDegre(a: float, b: float, c: float):
-#     delta = pow(b, 2) - 4 * a * c
-
-#     if delta > 0:
-#         x1 = (-b - sqrt(delta)) / (2 * a)
-#         x2 = (-b + sqrt(delta)) / (2 * a)
-#         print("Deux solutions :", x1, x2)
-#         return x1, x2
-#     elif delta == 0:
-#         x0 = -b / (2 * a)
-#         print("Une solution double :", x0)
-#         return x0
-#     else:
-#         print("Pas de solution réelle")
-#         return None
-
-# resoudreEquationSecondDegre(5, -3, 6) 
-# resoudreEquationSecondDegre(2, 2, 1)
-# resoudreEquationSecondDegre(1, 0, 1)
+# # # Programme principal
+# # a = saisieInt(10, 99)
+# # b = saisieInt(10, 99)
+# # resultat = intercaler(a, b)
+# # print("Le résultat est :", resultat)
 
 
-# from math import sqrt, pow
+# # # EXERCICE D :
+# # def intercaler(a: int, b: int) -> int:
+# #     dizaine = a // 10
+# #     unite = a % 10
+# #     return dizaine * 1000 + b * 10 + unite
 
-# def resoudreEquationSecondDegre(a: float, b: float, c: float):
-#     delta = pow(b, 2) - 4 * a * c
+# # def saisieInt(min_val: int, max_val: int) -> int:
+# #     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     while valeur < min_val or valeur > max_val:
+# #         print("Valeur incorrecte, réessayez.")
+# #         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+# #     return valeur
 
-#     if delta > 0:
-#         x1 = (-b - sqrt(delta)) / (2 * a)
-#         x2 = (-b + sqrt(delta)) / (2 * a)
-#         print("Deux solutions :", x1, x2)
-#         return x1, x2
-#     elif delta == 0:
-#         x0 = -b / (2 * a)
-#         print("Une solution double :", x0)
-#         return x0
-#     else:
-#         print("Pas de solution réelle")
-#         return None
+# # # Programme principal
+# # a = saisieInt(10, 99)
+# # b = saisieInt(10, 99)
+# # resultat = intercaler(a, b)
+# # print("Le résultat est :", resultat)
 
-# print("Résolution de a*x^2 + b*x + c = 0")
-# a = float(input("Entrez a : "))
-# b = float(input("Entrez b : "))
-# c = float(input("Entrez c : "))
+# # #  FICHE DE TD 2 :
 
-# resoudreEquationSecondDegre(a, b, c)
+# # # Exercice 1 :
+
+# # def valeurAbsolue(x: float) -> float:
+# #     if x < 0:
+# #         return -x
+# #     else:
+# #         return x
+# # print(valeurAbsolue(-7.5))  
+# # print(valeurAbsolue(3.2))  
 
 
-# # EXERCICE 3 :
+# # # Exercice 2 :
+# # # QUESTION B :
 
+# # def resoudreEquation(a: float, b: float) -> float:
+# #     if a == 0:
+# #         print("Pas de solution unique (a = 0)")
+# #         return None
+# #     else:
+# #         x = -b / a
+# #         return x
+    
+    
+# # # QUESTION C :
+
+# # def resoudreEquationSecondDegre(a: float, b: float, c: float):
+# #     delta = b * b - 4 * a * c
+
+# #     if delta > 0:
+# #         x1 = (-b - delta ** 0.5) / (2 * a)
+# #         x2 = (-b + delta ** 0.5) / (2 * a)
+# #         print("Deux solutions :", x1, x2)
+# #         return x1, x2
+# #     elif delta == 0:
+# #         x0 = -b / (2 * a)
+# #         print("Une solution double :", x0)
+# #         return x0
+# #     else:
+# #         print("Pas de solution réelle")
+# #         return None
+
+
+# # resoudreEquationSecondDegre(1, -3, 2)  
+# # resoudreEquationSecondDegre(1, 2, 1)  
+# # resoudreEquationSecondDegre(1, 0, 1) 
+
+# # # OU ENCORE :
+
+# # from math import sqrt, pow
+
+# # def resoudreEquationSecondDegre(a: float, b: float, c: float):
+# #     delta = pow(b, 2) - 4 * a * c
+
+# #     if delta > 0:
+# #         x1 = (-b - sqrt(delta)) / (2 * a)
+# #         x2 = (-b + sqrt(delta)) / (2 * a)
+# #         print("Deux solutions :", x1, x2)
+# #         return x1, x2
+# #     elif delta == 0:
+# #         x0 = -b / (2 * a)
+# #         print("Une solution double :", x0)
+# #         return x0
+# #     else:
+# #         print("Pas de solution réelle")
+# #         return None
+
+# # resoudreEquationSecondDegre(5, -3, 6) 
+# # resoudreEquationSecondDegre(2, 2, 1)
+# # resoudreEquationSecondDegre(1, 0, 1)
+
+
+# # from math import sqrt, pow
+
+# # def resoudreEquationSecondDegre(a: float, b: float, c: float):
+# #     delta = pow(b, 2) - 4 * a * c
+
+# #     if delta > 0:
+# #         x1 = (-b - sqrt(delta)) / (2 * a)
+# #         x2 = (-b + sqrt(delta)) / (2 * a)
+# #         print("Deux solutions :", x1, x2)
+# #         return x1, x2
+# #     elif delta == 0:
+# #         x0 = -b / (2 * a)
+# #         print("Une solution double :", x0)
+# #         return x0
+# #     else:
+# #         print("Pas de solution réelle")
+# #         return None
+
+# # print("Résolution de a*x^2 + b*x + c = 0")
+# # a = float(input("Entrez a : "))
+# # b = float(input("Entrez b : "))
+# # c = float(input("Entrez c : "))
+
+# # resoudreEquationSecondDegre(a, b, c)
+
+
+# # # EXERCICE 3 :
+
+# # # QUESTION A :
+
+# # def estEquilateral(a: float, b: float, c: float) -> bool:
+# #     if a == b and b == c:
+# #         return True
+# #     else:
+# #         return False
+
+# # print(estEquilateral(5, 5, 5))  
+# # print(estEquilateral(3, 4, 5)) 
+
+# # # QUESTION B :
+
+# # def estIsocele(a: float, b: float, c: float) -> bool:
+# #     if a == b or b == c or a == c:
+# #         return True
+# #     else:
+# #         return False
+
+# # print(estIsocele(7, 5, 8))  
+# # print(estIsocele(9, 4, 2))  
+
+# # # QUESTION C :
+
+# # def estRectangle(a: float, b: float, c: float) -> bool:
+
+# #     if a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b:
+# #         return True
+# #     else:
+# #         return False
+
+# # # Tests
+# # print(estRectangle(3, 4, 5))
+# # print(estRectangle(2, 2, 2))  
+
+# # # QUESTION D :
+
+# # def estEquilateral(a: float, b: float, c: float) -> bool:
+# #     return a == b and b == c
+
+# # def estRectangle(a: float, b: float, c: float) -> bool:
+# #     return (a*a == b*b + c*c or
+# #             b*b == a*a + c*c or
+# #             c*c == a*a + b*b)
+
+# # def estIsocele(a: float, b: float, c: float) -> bool:
+# #     return a == b or b == c or a == c
+
+# # # Programme principal
+# # a = float(input("Entrez le côté a : "))
+# # b = float(input("Entrez le côté b : "))
+# # c = float(input("Entrez le côté c : "))
+
+# # if estEquilateral(a, b, c):
+# #     print("Le triangle est équilatéral")
+# # elif estRectangle(a, b, c):
+# #     print("Le triangle est rectangle")
+# # elif estIsocele(a, b, c):
+# #     print("Le triangle est isocèle")
+# # else:
+# #     print("Le triangle est quelconque")
+    
+    
+# # # FICHE DE TD 3 :
+
+# # # EXERCICE 1 :
+
+# # # Ligne d'en-tête
+# # print("X", end="\t")
+# # for j in range(11):
+# #     print(j, end="\t")
+# # print()  # retour à la ligne
+
+# # # Lignes de la table
+# # for i in range(11):
+# #     print(i, end="\t")
+# #     for j in range(11):
+# #         print(i * j, end="\t")
+# #     print()  # retour à la ligne après chaque ligne i
+    
+    
+# # # EXERCICE 2 :
+    
+# # def afficherTriangle(c: int):
+# #     for i in range(1, c + 1):
+# #         nbEtoiles = c - i + 1
+# #         nbPoints = i - 1
+# #         print("*" * nbEtoiles + "." * nbPoints)
+
+
+# # afficherTriangle(6)
+
+# # # FICHE DE TD 4 :
+
+# # # EXERCICE 1 :
+# # # QUESTION A :
+
+# # def puissanceIteratif(x: float, n: int) -> float:
+# #     resultat = 1
+# #     for i in range(n):
+# #         resultat = resultat * x
+# #     return resultat
+
+# # print(puissanceIteratif(2, 5))
+
+# # # QUESTION B:
+
+# # def puissanceRecursif(x: float, n: int) -> float:
+# #     if n == 0:
+# #         return 1
+# #     else:
+# #         return x * puissanceRecursif(x, n - 1)
+
+
+# # print(puissanceRecursif(2, 9)) 
+
+
+# # def puissanceRapide(x: float, n: int) -> float:
+# #     if n == 0:
+# #         return 1
+# #     elif n % 2 == 0:
+# #         demi = puissanceRapide(x, n // 2)
+# #         return demi * demi
+# #     else:
+# #         demi = puissanceRapide(x, n // 2)
+# #         return x * demi * demi
+
+
+# # print(puissanceRapide(2, 10))
+
+# # # puissanceRapide est bien plus performant
+
+# # # EXERCICE 2 :
+
+# # # QUESTION A :
+
+
+# # def divise(a: int, b: int) -> bool:
+# #     return a % b == 0
+
+# # print(divise(10, 2)) 
+# # print(divise(10, 3))  
+# # print(divise(9, 3)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #  CHERCHER LA LISTE TRIE ET LA LISTE NON TRIE
+
+# # listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
+# # listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# # def chercher_trie(nbr,l) :
+# #      ind = 0
+# #      while ind < len(l) and l[ind] <= nbr:
+# #           if l[ind] == nbr :
+# #                return ind
+# #           ind = ind + 1
+
+# #      return -1
+
+
+# # def progr() :
+# #     n = int(input('vous cherchez quel valeur '))
+# #     resu = chercher_trie(n,listeTriee)
+# #     if(resu == -1) :
+# #           print("la valeur",n,"ne se trouve pas dans la liste")
+
+# #     else :
+# #          print("la valeur",n,"se trouve a l'indice",resu)
+
+
+# # progr()
+
+
+# # listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
+# # listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# # def chercher_trie(nbr,l) :
+# #      ind = 0
+# #      while ind < len(l) and l[ind] <= nbr:
+# #           if l[ind] == nbr :
+# #                return ind
+# #           ind = ind + 1
+
+# #      return -1
+
+
+# # def search(nbr,l,bmin=0,bmax=None) :
+# #     if bmax == None :
+# #         bmax = len(l)-1
+# #     if bmin > bmax or nbr < l[bmin] or nbr > l[bmax] :
+# #          return -1
+
+# #     m = (bmax - bmin) // 2
+# #     if l[m] == nbr :
+# #          return m
+# #     elif l[m] > nbr :
+# #          return search(nbr,l,bmin,m-1)
+# #     else :
+# #          return search(nbr,l,bmax,m+1)
+
+# # def progr() :
+
+# #     n = int(input('vous cherchez quel valeur '))
+#     # resu = chercher_trie(n,listeTriee)
+#     # if(resu == -1) :
+#     #       print("la valeur",n,"ne se trouve pas dans la liste")
+
+#     # else :
+#     #      print("la valeur",n,"se trouve a l'indice",resu)
+
+
+# # progr()
+
+
+
+
+# # TD 5 EXERCICE 2 :
+
+# # listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# # listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# # Question A :
+
+# # def nombre_occ_T(n,l) :
+# #      cpt= 0
+# #      for i in l :
+# #           if(i == n) :
+# #                cpt = cpt +1
+# #      return cpt
+
+# # def prog() :
+# #      nbr = int(input("saisir le nombre\n"))
+# #      resu = nombre_occ_T(nbr,12)
+# #      print("le nombre d'occurence de",nbr,"dans la liste trie est :",resu)
+
+
+# # QUESTION C :
+
+# # def nombre_min_max(l) :
+# #      max = l[0]
+# #      min = l[0]
+# #      for i in l :
+# #           if(i>max) :
+# #                max = l
+# #           if(i<min) :
+# #                min = l
+# #      return min,max
+
+# # def prog(l) :
+# #      min,max = nombre_min_max(l)
+# #      print("le nombre mini est",min,"le nombre maxi est:",max)
+
+# # prog()
+
+# # EXERCICE 3
 # # QUESTION A :
 
-# def estEquilateral(a: float, b: float, c: float) -> bool:
-#     if a == b and b == c:
-#         return True
-#     else:
-#         return False
+# # def moyenne(liste: list) :
+# #      somme = 0
+# #      for i in listeTest :
+# #           somme = somme + i
+# #           i = i + 1
 
-# print(estEquilateral(5, 5, 5))  
-# print(estEquilateral(3, 4, 5)) 
+# #      return somme/len(listeTest)
+
+# # def prog():
+# #      resu = moyenne(listeTest)
+
+# #      print("La moyenne de la liste ",listeTest,"est",resu)
+
+# # prog()
 
 # # QUESTION B :
 
-# def estIsocele(a: float, b: float, c: float) -> bool:
-#     if a == b or b == c or a == c:
-#         return True
-#     else:
-#         return False
+# # l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# # l1 = [1,3,5,6,7,9,12,16,17,19,20]
+# # l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
+# # l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
 
-# print(estIsocele(7, 5, 8))  
-# print(estIsocele(9, 4, 2))  
+# # def somme (l1,l2) :
+# #     resultat = []
+# #     for i in range(0,len(l1)) :
+# #         resultat.append(l1[i] + l2[i])
+
+# #     return resultat
+
+# # def prog() :
+# #     resu = moyenne(l3)
+# #     print("la somme de la liste est :",resu)
+# #     print("La somme est",somme(l,l1))
+
+# # prog()
 
 # # QUESTION C :
 
-# def estRectangle(a: float, b: float, c: float) -> bool:
+# # def somme (l1,l2) :
+# #     resultat = []
+# #     for i in range(0,len(l1)) :
+# #         resultat.append(l1[i] + l2[i])
 
-#     if a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b:
-#         return True
-#     else:
-#         return False
+# #     return resultat
 
-# # Tests
-# print(estRectangle(3, 4, 5))
-# print(estRectangle(2, 2, 2))  
+# # def doublon(liste) :
+# #     listeresu = []
+# #     for i in liste :
+# #         if i not in listeresu :
+# #             listeresu.append(i)
+
+# #     return listeresu
+
+# # def prog() :
+# #     resu = moyenne(l3)
+# #     print("la somme de la liste est :",resu)
+# #     print("La somme est",somme(l,l1))
+
+# # prog()
 
 # # QUESTION D :
 
-# def estEquilateral(a: float, b: float, c: float) -> bool:
-#     return a == b and b == c
+# # l1 = [1,3,5,6,7,9,12,16,17,19,20,25,36,12,6,4]
+# # l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
 
-# def estRectangle(a: float, b: float, c: float) -> bool:
-#     return (a*a == b*b + c*c or
-#             b*b == a*a + c*c or
-#             c*c == a*a + b*b)
+# # def elt_commun(l1,l2) :
+# #     liste_commun = []
+# #     for i in l1 :
+# #         if i in l2 :
+# #             liste_commun.append(i)
 
-# def estIsocele(a: float, b: float, c: float) -> bool:
-#     return a == b or b == c or a == c
+# #     return liste_commun
 
-# # Programme principal
-# a = float(input("Entrez le côté a : "))
-# b = float(input("Entrez le côté b : "))
-# c = float(input("Entrez le côté c : "))
+# # def prog() :
+# #     resu = elt_commun(l1,l2)
+# #     print("La liste commun entre les deux lign est",resu)
 
-# if estEquilateral(a, b, c):
-#     print("Le triangle est équilatéral")
-# elif estRectangle(a, b, c):
-#     print("Le triangle est rectangle")
-# elif estIsocele(a, b, c):
-#     print("Le triangle est isocèle")
-# else:
-#     print("Le triangle est quelconque")
-    
-    
-# # FICHE DE TD 3 :
+# # prog()
 
-# # EXERCICE 1 :
-
-# # Ligne d'en-tête
-# print("X", end="\t")
-# for j in range(11):
-#     print(j, end="\t")
-# print()  # retour à la ligne
-
-# # Lignes de la table
-# for i in range(11):
-#     print(i, end="\t")
-#     for j in range(11):
-#         print(i * j, end="\t")
-#     print()  # retour à la ligne après chaque ligne i
-    
-    
-# # EXERCICE 2 :
-    
-# def afficherTriangle(c: int):
-#     for i in range(1, c + 1):
-#         nbEtoiles = c - i + 1
-#         nbPoints = i - 1
-#         print("*" * nbEtoiles + "." * nbPoints)
+# # ou encore :
+# # l1 = [1, 3, 5, 6, 7, 9, 12, 16, 17, 19, 20, 25, 36, 12, 6, 4]
+# # l2 = [12, 52, 15, 25, 36, 98, 45, 5, 6, 5, 66, 56, 56, 4, 6]
 
 
-# afficherTriangle(6)
+# # def elt_commun():
+# #     liste_commun = []
 
-# # FICHE DE TD 4 :
+# #     for i in l1:
+# #         for j in l2:
+# #             if i == j:
+# #                 liste_commun.append(i)
 
-# # EXERCICE 1 :
-# # QUESTION A :
-
-# def puissanceIteratif(x: float, n: int) -> float:
-#     resultat = 1
-#     for i in range(n):
-#         resultat = resultat * x
-#     return resultat
-
-# print(puissanceIteratif(2, 5))
-
-# # QUESTION B:
-
-# def puissanceRecursif(x: float, n: int) -> float:
-#     if n == 0:
-#         return 1
-#     else:
-#         return x * puissanceRecursif(x, n - 1)
+# #     return liste_commun
 
 
-# print(puissanceRecursif(2, 9)) 
+
+# # def prog():
+# #     resu = elt_commun()
+# #     print("La liste des éléments communs entre les deux listes et :", resu)
 
 
-# def puissanceRapide(x: float, n: int) -> float:
-#     if n == 0:
-#         return 1
-#     elif n % 2 == 0:
-#         demi = puissanceRapide(x, n // 2)
-#         return demi * demi
-#     else:
-#         demi = puissanceRapide(x, n // 2)
-#         return x * demi * demi
+# # prog()
 
-
-# print(puissanceRapide(2, 10))
-
-# # puissanceRapide est bien plus performant
-
-# # EXERCICE 2 :
+# # TD 6 EXERCICE 1 :
 
 # # QUESTION A :
 
+# # etudiants = {
+# #      "nom": "Niyonkuru", "prenom": "David",
+# #      "nom": "Irakoze", "prenom": "Aline",
+# #      "nom": "Nkurunziza", "prenom": "Kevin",
+# #      "nom": "Hakizimana", "prenom": "Samuel",
+# #      "nom": "Uwimana", "prenom": "Grace"
+# # }
 
-# def divise(a: int, b: int) -> bool:
-#     return a % b == 0
+# # def note_etudiant() :
+# #     for etudiant in etudiants:
+# #         nom = etudiant["nom"]
+# #         prenom = etudiant["pernom"]
+# #         note = int(input(f"saisir les note du {nom},{prenom}"))
+# #         etudiants["note"] = note
 
-# print(divise(10, 2)) 
-# print(divise(10, 3))  
-# print(divise(9, 3)) 
+# #     return etudiants
 
+# # r
+# # def prog() :
+# #     resu = note_etudiant()
+# #     print(resu)
 
+# # prog()
 
 
 
+# # FICHE DE TD 6 :
 
+# # EXERCICE 1 :
 
+# # QUESTION A :
 
+# # etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
+# # {"nom": "Irakoze", "prenom": "Aline"},
+# # {"nom": "Nkurunziza", "prenom": "Kevin"},
+# # {"nom": "Hakizimana", "prenom": "Samuel"},
+# # {"nom": "Uwimana", "prenom": "Grace"}]
 
+# # def saisiNote(liste) :
+# #     for i in range(0,len(liste)) :
+# #         print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
+# #         note = int(input())
+# #         liste[i]["note"]= note
+# #     return liste
 
+# # def prog() :
+# #     l1= saisiNote(d)
+# #     print(l1)
 
+# # prog()
 
+# # QUESTION B :
 
+# # def meilleur(liste :list)->list :
+# #     max = 0
+# #     l=[]
+# #     for i in range(0,len(liste)) :
+# #         if(max< liste[i]["note"]) :
+# #             max = liste[i]["note"]
 
 
+# #     for i in range(0,len(0,len(liste))) :
+# #         if (max==liste[i]["note"]) :
+# #             l.append((liste[i]["nom"],liste[i]["prenom"]))
 
+# #     return l
 
+# # def prog() :
+# #     l2 =meilleur(l1)
 
 
+# # # QUESTION C :
 
-#  CHERCHER LA LISTE TRIE ET LA LISTE NON TRIE
-
-# listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
-# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
-
-# def chercher_trie(nbr,l) :
-#      ind = 0
-#      while ind < len(l) and l[ind] <= nbr:
-#           if l[ind] == nbr :
-#                return ind
-#           ind = ind + 1
-
-#      return -1
-
-
-# def progr() :
-#     n = int(input('vous cherchez quel valeur '))
-#     resu = chercher_trie(n,listeTriee)
-#     if(resu == -1) :
-#           print("la valeur",n,"ne se trouve pas dans la liste")
-
-#     else :
-#          print("la valeur",n,"se trouve a l'indice",resu)
-
-
-# progr()
-
-
-# listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
-# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
-
-# def chercher_trie(nbr,l) :
-#      ind = 0
-#      while ind < len(l) and l[ind] <= nbr:
-#           if l[ind] == nbr :
-#                return ind
-#           ind = ind + 1
-
-#      return -1
-
-
-# def search(nbr,l,bmin=0,bmax=None) :
-#     if bmax == None :
-#         bmax = len(l)-1
-#     if bmin > bmax or nbr < l[bmin] or nbr > l[bmax] :
-#          return -1
-
-#     m = (bmax - bmin) // 2
-#     if l[m] == nbr :
-#          return m
-#     elif l[m] > nbr :
-#          return search(nbr,l,bmin,m-1)
-#     else :
-#          return search(nbr,l,bmax,m+1)
-
-# def progr() :
-
-#     n = int(input('vous cherchez quel valeur '))
-    # resu = chercher_trie(n,listeTriee)
-    # if(resu == -1) :
-    #       print("la valeur",n,"ne se trouve pas dans la liste")
-
-    # else :
-    #      print("la valeur",n,"se trouve a l'indice",resu)
-
-
-# progr()
-
-
-
-
-# TD 5 EXERCICE 2 :
-
-# listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
-# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
-
-# Question A :
-
-# def nombre_occ_T(n,l) :
-#      cpt= 0
-#      for i in l :
-#           if(i == n) :
-#                cpt = cpt +1
-#      return cpt
-
-# def prog() :
-#      nbr = int(input("saisir le nombre\n"))
-#      resu = nombre_occ_T(nbr,12)
-#      print("le nombre d'occurence de",nbr,"dans la liste trie est :",resu)
-
-
-# QUESTION C :
-
-# def nombre_min_max(l) :
-#      max = l[0]
-#      min = l[0]
-#      for i in l :
-#           if(i>max) :
-#                max = l
-#           if(i<min) :
-#                min = l
-#      return min,max
-
-# def prog(l) :
-#      min,max = nombre_min_max(l)
-#      print("le nombre mini est",min,"le nombre maxi est:",max)
-
-# prog()
-
-# EXERCICE 3
-# QUESTION A :
-
-# def moyenne(liste: list) :
-#      somme = 0
-#      for i in listeTest :
-#           somme = somme + i
-#           i = i + 1
-
-#      return somme/len(listeTest)
-
-# def prog():
-#      resu = moyenne(listeTest)
-
-#      print("La moyenne de la liste ",listeTest,"est",resu)
-
-# prog()
-
-# QUESTION B :
-
-# l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
-# l1 = [1,3,5,6,7,9,12,16,17,19,20]
-# l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
-# l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
-
-# def somme (l1,l2) :
-#     resultat = []
-#     for i in range(0,len(l1)) :
-#         resultat.append(l1[i] + l2[i])
-
-#     return resultat
-
-# def prog() :
-#     resu = moyenne(l3)
-#     print("la somme de la liste est :",resu)
-#     print("La somme est",somme(l,l1))
-
-# prog()
-
-# QUESTION C :
-
-# def somme (l1,l2) :
-#     resultat = []
-#     for i in range(0,len(l1)) :
-#         resultat.append(l1[i] + l2[i])
-
-#     return resultat
-
-# def doublon(liste) :
-#     listeresu = []
-#     for i in liste :
-#         if i not in listeresu :
-#             listeresu.append(i)
-
-#     return listeresu
-
-# def prog() :
-#     resu = moyenne(l3)
-#     print("la somme de la liste est :",resu)
-#     print("La somme est",somme(l,l1))
-
-# prog()
-
-# QUESTION D :
-
-# l1 = [1,3,5,6,7,9,12,16,17,19,20,25,36,12,6,4]
-# l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
-
-# def elt_commun(l1,l2) :
-#     liste_commun = []
-#     for i in l1 :
-#         if i in l2 :
-#             liste_commun.append(i)
-
-#     return liste_commun
-
-# def prog() :
-#     resu = elt_commun(l1,l2)
-#     print("La liste commun entre les deux lign est",resu)
-
-# prog()
-
-# ou encore :
-# l1 = [1, 3, 5, 6, 7, 9, 12, 16, 17, 19, 20, 25, 36, 12, 6, 4]
-# l2 = [12, 52, 15, 25, 36, 98, 45, 5, 6, 5, 66, 56, 56, 4, 6]
-
-
-# def elt_commun():
-#     liste_commun = []
-
-#     for i in l1:
-#         for j in l2:
-#             if i == j:
-#                 liste_commun.append(i)
-
-#     return liste_commun
-
-
-
-# def prog():
-#     resu = elt_commun()
-#     print("La liste des éléments communs entre les deux listes et :", resu)
-
-
-# prog()
-
-# TD 6 EXERCICE 1 :
-
-# QUESTION A :
-
-# etudiants = {
-#      "nom": "Niyonkuru", "prenom": "David",
-#      "nom": "Irakoze", "prenom": "Aline",
-#      "nom": "Nkurunziza", "prenom": "Kevin",
-#      "nom": "Hakizimana", "prenom": "Samuel",
-#      "nom": "Uwimana", "prenom": "Grace"
-# }
-
-# def note_etudiant() :
-#     for etudiant in etudiants:
-#         nom = etudiant["nom"]
-#         prenom = etudiant["pernom"]
-#         note = int(input(f"saisir les note du {nom},{prenom}"))
-#         etudiants["note"] = note
-
-#     return etudiants
-
-# r
-# def prog() :
-#     resu = note_etudiant()
-#     print(resu)
-
-# prog()
-
-
-
-# FICHE DE TD 6 :
-
-# EXERCICE 1 :
-
-# QUESTION A :
-
-# etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
-# {"nom": "Irakoze", "prenom": "Aline"},
-# {"nom": "Nkurunziza", "prenom": "Kevin"},
-# {"nom": "Hakizimana", "prenom": "Samuel"},
-# {"nom": "Uwimana", "prenom": "Grace"}]
-
-# def saisiNote(liste) :
-#     for i in range(0,len(liste)) :
-#         print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
-#         note = int(input())
-#         liste[i]["note"]= note
-#     return liste
-
-# def prog() :
-#     l1= saisiNote(d)
-#     print(l1)
-
-# prog()
-
-# QUESTION B :
-
-# def meilleur(liste :list)->list :
-#     max = 0
-#     l=[]
-#     for i in range(0,len(liste)) :
-#         if(max< liste[i]["note"]) :
-#             max = liste[i]["note"]
-
-
-#     for i in range(0,len(0,len(liste))) :
-#         if (max==liste[i]["note"]) :
-#             l.append((liste[i]["nom"],liste[i]["prenom"]))
-
-#     return l
-
-# def prog() :
-#     l2 =meilleur(l1)
-
-
-# # QUESTION C :
-
-# def noteEtudiant(note:float,listeNote :list) :
-#    listeNote = []
-#    for i in range(0,note) :
-#        while note<20 :
-#         if 0 <=note<= 20 :
-#            if listeNote[i-1]> listeNote[i] :
-#               temps = listeNote[i]
-#               listeNote= listeNote[i-1]
-#            listeNote.append[i]
+# # def noteEtudiant(note:float,listeNote :list) :
+# #    listeNote = []
+# #    for i in range(0,note) :
+# #        while note<20 :
+# #         if 0 <=note<= 20 :
+# #            if listeNote[i-1]> listeNote[i] :
+# #               temps = listeNote[i]
+# #               listeNote= listeNote[i-1]
+# #            listeNote.append[i]
 
            
 
    
 
 
-# FICHE DE TD 7  :
+# # FICHE DE TD 7  :
 
-# EXERCICE 1 
-# QUESTION A
+# # EXERCICE 1 
+# # QUESTION A
 
-def palindrome(mot) :
-   if mot[::-1] == mot :
-      return True
-   else :
-      return False
+# def palindrome(mot) :
+#    if mot[::-1] == mot :
+#       return True
+#    else :
+#       return False
 
 
-def prog() :
-   m = input("saisie un mot ")
-   var = palindrome(m)
-   if(var==True) :
-      print(m, "est un palindrome")
-   else :
-      print(m , "n est pas un palindrome")
+# def prog() :
+#    m = input("saisie un mot ")
+#    var = palindrome(m)
+#    if(var==True) :
+#       print(m, "est un palindrome")
+#    else :
+#       print(m , "n est pas un palindrome")
 
-# prog()
+# # prog()
 
-# QUESTION B  :
+# # QUESTION B  :
 
-# pour tester une lettre
-def compter(s1,s2) :
-   score = 0
-   for i in range(len(s1)) :
-      for j in range(len(s2)) :
-         if s1[i] == s2[j] :
-            score = score + 1
-   return score
+# # pour tester une lettre
+# def compter(s1,s2) :
+#    score = 0
+#    for i in range(len(s1)) :
+#       for j in range(len(s2)) :
+#          if s1[i] == s2[j] :
+#             score = score + 1
+#    return score
 
-def prog() :
-   s1 = "Bonjour tout le monde"
-   s2 = "o"
-   print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+# def prog() :
+#    s1 = "Bonjour tout le monde"
+#    s2 = "o"
+#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
 
-# prog()
+# # prog()
 
-# AUTRE VERSION :
-# pour tester deux lettre
-def compter(s1,s2) :
-   score = 0
-   for i in range(0,len(s2)-len(s1)) :
-      if(s2[i:len(s1)+i]==s1) :
-         score = score +1
+# # AUTRE VERSION :
+# # pour tester deux lettre
+# def compter(s1,s2) :
+#    score = 0
+#    for i in range(0,len(s2)-len(s1)) :
+#       if(s2[i:len(s1)+i]==s1) :
+#          score = score +1
 
-      return score
+#       return score
 
-def prog() :
-   s1 = "Bonjour tout le monde"
-   s2 = "o"
-   print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
+# def prog() :
+#    s1 = "Bonjour tout le monde"
+#    s2 = "o"
+#    print("ma phrase 1 se trouve",compter(s1,s2),"fois dans la phrase 2")
 
-# prog()
+# # prog()
 
-# QUESTION C :
+# # QUESTION C :
 
-def voyeur(v) :
-   l = "aiuoeAIUOE"
-   score = 0
-   for i in v:
-      if i in l:
-         score = score + 1
-   return score
+# def voyeur(v) :
+#    l = "aiuoeAIUOE"
+#    score = 0
+#    for i in v:
+#       if i in l:
+#          score = score + 1
+#    return score
          
-def prog() :
-   v = "bonjour je suis etudiant en but"
-   print("les voyelle sont au nombre de",voyeur(v),"fois")
+# def prog() :
+#    v = "bonjour je suis etudiant en but"
+#    print("les voyelle sont au nombre de",voyeur(v),"fois")
 
-# prog()
+# # prog()
 
 
-def voyeur(v) :
-   score = 0
-   for i in range(len(v)) :
-      if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
-         score = score + 1
+# def voyeur(v) :
+#    score = 0
+#    for i in range(len(v)) :
+#       if v[i] == 'a' or v[i] == 'i' or v[i] == 'u' or v[i] == 'o' or v[i] == 'e' :
+#          score = score + 1
 
-      return score
+#       return score
          
-def prog() :
-   v = "bonjour"
-   print("les voyelle sont au nombre de",voyeur(v),"fois")
+# def prog() :
+#    v = "bonjour"
+#    print("les voyelle sont au nombre de",voyeur(v),"fois")
 
-# prog()
+# # prog()
 
-# QUESTION D :
-def miniscule(phrase) :
-    l =[]
-    for i in phrase :
-        if(65<= ord(i) <= 90) :
-            l.append(chr(ord(i)+32))
-        else :
-            l.append(i)
+# # QUESTION D :
+# def miniscule(phrase) :
+#     l =[]
+#     for i in phrase :
+#         if(65<= ord(i) <= 90) :
+#             l.append(chr(ord(i)+32))
+#         else :
+#             l.append(i)
             
             
-    resu = ""
-    for i in l :
-        resu = resu +i
+#     resu = ""
+#     for i in l :
+#         resu = resu +i
         
-    return resu
+#     return resu
 
-def prog() :
-    m = input("Entrer un mot\n")
-    print(miniscule(m))
-# prog()
+# def prog() :
+#     m = input("Entrer un mot\n")
+#     print(miniscule(m))
+# # prog()
         
-# QUESTION E :
+# # QUESTION E :
 
-def anagramme(str1,str2) :
-    if len (str1) != len(str2) :
-        return False
-    string1 = miniscule(str1) 
-    string2 = miniscule(str2)
-    cpt1 = [0]*26
-    cpt2 = [0]*26
-    for lettre in string1 :
-        if 'a' <= lettre<= 'z' :
-            cpt1[ord(lettre)-ord('a')] += 1
+# def anagramme(str1,str2) :
+#     if len (str1) != len(str2) :
+#         return False
+#     string1 = miniscule(str1) 
+#     string2 = miniscule(str2)
+#     cpt1 = [0]*26
+#     cpt2 = [0]*26
+#     for lettre in string1 :
+#         if 'a' <= lettre<= 'z' :
+#             cpt1[ord(lettre)-ord('a')] += 1
             
-    for lettre in string2 :
-        if 'a' <= lettre<= 'z' :
-            cpt2[ord(lettre)-ord('a')] += 1
+#     for lettre in string2 :
+#         if 'a' <= lettre<= 'z' :
+#             cpt2[ord(lettre)-ord('a')] += 1
             
-    print(cpt1)
-    print(cpt2)
-    if(cpt1 == cpt2)  :
-        return True
-    else :
-        return False
+#     print(cpt1)
+#     print(cpt2)
+#     if(cpt1 == cpt2)  :
+#         return True
+#     else :
+#         return False
     
-def prog() :
-    if (anagramme("niche","chien")) :
-     print("anagramme")
+# def prog() :
+#     if (anagramme("niche","chien")) :
+#      print("anagramme")
         
-    else :
-     print("ce n'est pas un anagramme")
+#     else :
+#      print("ce n'est pas un anagramme")
         
-# prog()
+# # prog()
 
 
 
-# QUESION F :
+# # QUESION F :
 
-def nombre_indent(phr1,phr2) :
-    cpt = 0
-    for i in phr1 :
-        if i in phr2 :
-            cpt += 1
-    return cpt
+# def nombre_indent(phr1,phr2) :
+#     cpt = 0
+#     for i in phr1 :
+#         if i in phr2 :
+#             cpt += 1
+#     return cpt
 
-def  prog() :
-    phrase1 = "aab"
-    phrase2 = "ac"
+# def  prog() :
+#     phrase1 = "aab"
+#     phrase2 = "ac"
     
-    print("le nomber de lettre commune entre ces deux phrase est",nombre_indent(phrase1,phrase2))           
+#     print("le nomber de lettre commune entre ces deux phrase est",nombre_indent(phrase1,phrase2))           
 
 
-# prog()
+# # prog()
 
-# ou encore :
+# # ou encore :
 
-def nombre_indent(phr1,phr2) :
-    cpt = 0
-    for i in phr1 :
-        for j in phr2 :
-            if i == j :
-                cpt += 1
-    return cpt
+# def nombre_indent(phr1,phr2) :
+#     cpt = 0
+#     for i in phr1 :
+#         for j in phr2 :
+#             if i == j :
+#                 cpt += 1
+#     return cpt
 
-# print(nombre_indent("aab","ac"))
+# # print(nombre_indent("aab","ac"))
 
-# FICHE DE TD 8 :
+# # FICHE DE TD 8 :
 
-def matrice_nul_carre(cln:list,lgn:list) ->list :
-    res = []
-    liste = []
-    for  i in range(cln) :
-        liste.append(0)
-        for j in range(lgn) :
-            res.append(liste)
+# def matrice_nul_carre(cln:list,lgn:list) ->list :
+#     res = []
+#     liste = []
+#     for  i in range(cln) :
+#         liste.append(0)
+#         for j in range(lgn) :
+#             res.append(liste)
             
-    return res
+#     return res
 
-m = (matrice_nul_carre(1,3))
-for i in m :
-  print(m)
+# m = (matrice_nul_carre(1,3))
+# for i in m :
+#   print(m)
         
-# ou encore: 
+# # ou encore: 
 
 
 def creer_matrice(lignes,colonnes) :
@@ -904,47 +904,109 @@ def prog() :
 
 
 
-# ADDITION DE DEUX MATRICE :
+# # ADDITION DE DEUX MATRICE :
 
-def addMat(mA,mB) :
-    mC = creer_matrice(len(mA),len(mA[0])) 
-    for i in range(0,len(mA)) :
-        for j in range(0,len(mA[0])) :
-            mC[i][j] = mA[i][j] +mB[i][j]
+# def addMat(mA,mB) :
+#     mC = creer_matrice(len(mA),len(mA[0])) 
+#     for i in range(0,len(mA)) :
+#         for j in range(0,len(mA[0])) :
+#             mC[i][j] = mA[i][j] +mB[i][j]
             
-    return mC
+#     return mC
                 
-def prog() :
+# def prog() :
     
-    a= [[1,2,3],[4,5,6],[2,-2,4]]
-    b = [[9,8,7],[6,5,4],[3,2,1]]
-    print(addMat(a,b))
+#     a= [[1,2,3],[4,5,6],[2,-2,4]]
+#     b = [[9,8,7],[6,5,4],[3,2,1]]
+#     print(addMat(a,b))
 
-# print(prog())
+# # print(prog())
 
 
-def  scalaire(nombre :float,mB) :
-     mC = creer_matrice(len(mB),len(mB[0]))
-     for i in range(0,len(mB)) :
-         for j in range(0,len(mB[0])) :
-             mC[i][j] = nombre * mB[i][j]
-             print(mC[i][j])
+# def  scalaire(nombre :float,mB) :
+#      mC = creer_matrice(len(mB),len(mB[0]))
+#      for i in range(0,len(mB)) :
+#          for j in range(0,len(mB[0])) :
+#              mC[i][j] = nombre * mB[i][j]
+#              print(mC[i][j])
              
              
-     return mC 
+#      return mC 
 
 
+
+# def prog() :
+#     #  a= [[1,2,3],[4,5,6],[2,-2,4]]
+#      b = [[9,8,7],[6,5,4],[3,2,1]]
+     
+#      print(scalaire(11,b))
+
+
+# # prog()
+
+# Question E
+
+def produitMatrice(mat1:list,mat2:list) -> list :
+    c=creer_matrice(len(mat1),len(mat2[0]))
+    for i in range(0,len(c)) :
+        for j in range(0,len(c[0])) :
+            somme = 0
+            for k in range(0,len(mat1[0])) :
+                somme = somme + mat1[i][k]*mat2[k][j]
+                c[i][j] = somme
+                
+    return c 
 
 def prog() :
-    #  a= [[1,2,3],[4,5,6],[2,-2,4]]
-     b = [[9,8,7],[6,5,4],[3,2,1]]
-     
-     print(scalaire(11,b))
+    mat1 =[[1,2,3],[4,5,6]]
+    mat2 = [[7,8][9,-1],[-2,-3]]
+    print(produitMatrice(mat1,mat2))
+        
+# prog()
 
 
+
+
+# ou encore
+# def produitMatrice(matrice1,matrice2) :
+#     produit_matrice =[]
+#     for i in range(len(matrice1)) :
+#         ligne=[]
+#     for j in range(len(matrice2[0])):
+#         for k in range(len(matrice1[0])):
+#             elt = matrice1[i][j]*matrice2[i][j]
+#             elt = matrice1[i][k]*matrice2[i][k]
+#         ligne.append(elt)   
+        
+#     produit_matrice.append(ligne)
+    
+#     return produit_matrice
+
+# def prog() :
+#     mat1 =[[1,2,3],[4,5,6]]
+#     mat2 = [[7,8][9,-1],[-2,-3]]
+#     print(produitMatrice(mat1,mat2))
+    
+# prog()
+
+# QUESTION F :
+
+def transMat(A) :
+    c=[]
+    for j in range(0,len(A[0])) :
+        c.append([])
+        for i in range(0,len[A]) :
+            c[j].append(A[i][j])
+            
+    return c
+
+def prog() :
+    A = [[1,2,3],[4,5,6]]
+    transpose = transMat(A)
+    return transpose
 prog()
+    
+            
 
-
-
-
+  
 
