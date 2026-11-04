@@ -991,20 +991,93 @@ def prog() :
 
 # QUESTION F :
 
-def transMat(A) :
-    c=[]
-    for j in range(0,len(A[0])) :
-        c.append([])
-        for i in range(0,len[A]) :
-            c[j].append(A[i][j])
+# def transMat(A) :
+#     c=[]
+#     for j in range(0,len(A[0])) :
+#         c.append([])
+#         for i in range(0,len[A]) :
+#             c[j].append(A[i][j])
             
-    return c
+#     return c
 
-def prog() :
-    A = [[1,2,3],[4,5,6]]
-    transpose = transMat(A)
-    return transpose
-prog()
+# def prog() :
+#     A = [[1,2,3],[4,5,6]]
+#     transpose = transMat(A)
+#     return transpose
+# prog()
+
+# EXERCICE 2 :
+
+# Question A :
+
+# proposition :
+
+# def creer_matirce_vide(l:list,c:list) -> list :
+#     liste= []
+#     resultat =[]
+#     for i in range(len(l)) :
+#         liste.append(0)
+#         for j in range(len(c)) :
+#             resultat.append(liste)
+            
+#     return resultat 
+# def dame(creer_matrice_vide) -> list :
+#     ligne =[]
+#     colone = []
+#     for j in range(creer_matrice_vide(range(1,2,7))) :
+#        ligne.append(2)
+#        for i in range(creer_matrice_vide(range()))
+   
+   
+def creer_dame() :
+    damier=[]
+    for i in range(0,10) :
+        ligne=[]
+        for j in range(0,10) :
+            ligne.append(0)
+        damier.append(ligne)
+    # print(damier)
+    for ligne in range(0,4) :
+        for col in range(10) :
+            if (ligne + col)%2 == 1 :
+                damier[ligne][col] = 2 
+        for ligne in range(6,10) :
+            for col in range(10) :
+                if (ligne+col)%2 ==1 :
+                    damier[ligne][col] =1
+                    
+    return damier
+
+def afficher_damier(damier) :
+    print("  ",end="")
+    for i in range(10) :
+        print(f"{i}",end=" ")     
+    print()
+    for i in range(10) :
+        print(f"{i}",end=" ")
+        for j in range(10) :
+            if (i+j)% 2 ==1 :
+                if damier[i][j]==1 :
+                    print("|B|",end="")
+                elif damier[i][j] ==2 :
+                    print("N",end="")
+                else :
+                    print("| |",end=" ")
+                    
+            else :
+                 print(" ",end="")
+                 
+                 
+        print()
+            
+            
+def partie_dame() :
+    damier = creer_dame()
+    afficher_damier(damier)
+
+partie_dame()
+            
+    
     
             
 
