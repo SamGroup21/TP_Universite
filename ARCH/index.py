@@ -1060,14 +1060,13 @@ def afficher_damier(damier) :
                 if damier[i][j]==1 :
                     print("|B|",end="")
                 elif damier[i][j] ==2 :
-                    print("N",end="")
+                    print("|N|",end="")
                 else :
-                    print("| |",end=" ")
+                    print("||",end=" ")
                     
             else :
                  print(" ",end="")
-                 
-                 
+         
         print()
             
             
@@ -1077,6 +1076,59 @@ def partie_dame() :
 
 partie_dame()
             
+    
+# QUESTION D :
+
+def est_case_noire(x,y) :
+    if(x+y)%2== 1 :
+         return True
+    else :
+        return False
+
+def deplacer_piece(damier,depart,arrivee) :
+    x1,x2 = depart
+    y1,y2 = arrivee
+    
+    if not est_case_noire(x2,y2) :
+        return False
+    if damier[x1][y1] == 0 or damier[x2][y2] != 0 :
+        return False
+    
+    dx = x2 - x1
+    dy = y2 - y1
+    
+    joueur = damier[x1][y1]
+    
+    if abs(dx) == 1 and abs(dy) ==1 :
+        damier[x2][y2] = joueur
+        damier[x1][x2] = 0
+        return True
+    
+    if abs(dx)==2 and abs(dy) ==2 :
+        mx = (x1 + x2)// 2
+        my = (y1 + y2)// 2
+        
+        
+        if joueur == 1 :
+            adversaire = 2
+        else :
+            adversaire = 1 
+        if damier[mx][my] == adversaire :
+            damier[x2][y2] =joueur
+            damier[x1][y1] = 0
+            damier[mx][my] = 0
+            return True 
+        
+    return False
+        
+def partie_dames() :
+    damier = creer_dame()
+    print("damier :\n",damier,"\n")
+    joueur = 1 #1 =black, 2 = noir
+    
+    while True :
+        
+
     
     
             

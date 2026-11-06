@@ -77,7 +77,8 @@ def nextGeneration(grille:list[list[int]]) ->list[list[int]] :
     return newG
 
 # def main() :
-    
+
+
     
 def affichageModeTexte(grille:list[list[int]]) -> list[list[int]] :
     nombre = int(input("combien de cellule vous voulez mettre "))
@@ -89,6 +90,12 @@ def affichageModeTexte(grille:list[list[int]]) -> list[list[int]] :
             for colonne in range(len(grille(ligne))) :
                 if grille[ligne][colonne] == 0 :
                     print("| |")
+                    
+                    
+                    
+
+
+
 
             
 
