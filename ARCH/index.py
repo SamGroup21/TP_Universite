@@ -1074,7 +1074,7 @@ def partie_dame() :
     damier = creer_dame()
     afficher_damier(damier)
 
-partie_dame()
+# partie_dame()
             
     
 # QUESTION D :
@@ -1141,6 +1141,65 @@ def partie_dames() :
             print("Ce n'est pas votre pion")
             continue
             
+            
+            
+            
+            
+            
+            
+            
+            
+# FICHE DE TD 9 :
+
+# EXERCICE 1 :
+
+# QUESTION A :            
+         
+    
+def remplacer(liste,index,liste2) :
+    fin = index + len(liste2)
+    liste[index:fin] = liste2
+    return liste
+
+l1 = [1,2,3,4,5]
+l2 = [10,20,30]
+remplacer(l1,2,l2)
+# print(l1)  # Résultat : [1, 2, 10, 20, 30]
+
+def fusionner(liste,debut,milieu,fin) :
+    gauche = []
+    for j in range(debut,milieu+1) :
+        gauche.append(liste[j])
+    droite = []
+    for j in range(milieu+1,fin+1) :
+        droite.append(liste[j])
+    fusion = []
+    i = 0
+    j = 0
+    while i < len(gauche) and j < len(droite) :
+        if gauche[i] <= droite[j] :
+            fusion.append(gauche[i])
+            i += 1
+        else :
+            fusion.append(droite[j])
+            j += 1
+    while i < len(gauche) :
+        fusion.append(gauche[i])
+        i += 1
+    while j < len(droite) :
+        fusion.append(droite[j])
+        j += 1
+    remplacer(liste,debut,fusion)
+    
+    
+ma_liste = [38,27,43,3,9,82,10]
+fusionner(ma_liste,0,3,6)
+print(ma_liste)
+
+
+    
+
+       
         
 
     
