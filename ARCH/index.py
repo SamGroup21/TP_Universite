@@ -1127,6 +1127,20 @@ def partie_dames() :
     joueur = 1 #1 =black, 2 = noir
     
     while True :
+        afficher_damier(damier)
+        print(f"\nTour du jouerur {'Blanc' if joueur == 1 else 'Noir'}")
+        
+        x1 = int(input("coordonne x de depart : "))
+        y1 = int(input("coordonne y de depart: "))
+        dep = (x1,y1)
+        x2 = int(input("coor x d'arrrive: "))
+        y2 = int(input("coord y d'arrive : "))
+        arr = (x2,y2)
+        
+        if damier[dep[0]][dep[1]] != joueur :
+            print("Ce n'est pas votre pion")
+            continue
+            
         
 
     
