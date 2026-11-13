@@ -1194,9 +1194,9 @@ def fusionner(liste,debut,milieu,fin) :
     remplacer(liste,debut,fusion)
 
 
-ma_liste = [38,27,43,3,9,82,10]
-fusionner(ma_liste,1,3,6)
-print(ma_liste)
+# ma_liste = [38,27,43,3,9,82,10]
+# fusionner(ma_liste,1,3,6)
+# print(ma_liste)
 
 
 # QUESTION  C:
@@ -1212,15 +1212,15 @@ def tri_fusion(liste,debut,fin) :
         return liste
         
         
-if __name__ == "__main__" :
+# if __name__ == "__main__" :
     
-    liste = [38,27,43,3,9,82,10]
-    print("Liste avant le tri :", liste)
-    print("-"*40)
-    index_depart = 0
-    index_fin = len(liste) - 1
-    tri_fusion(liste, 0, len(liste) - 1)
-    print("Liste après le tri fin:", liste)
+#     liste = [38,27,43,3,9,82,10]
+#     print("Liste avant le tri :", liste)
+#     print("-"*40)
+#     index_depart = 0
+#     index_fin = len(liste) - 1
+#     tri_fusion(liste, 0, len(liste) - 1)
+#     print("Liste après le tri fin:", liste)
     
     
     
@@ -1236,11 +1236,10 @@ def inserer_dans_liste_triee(liste,val) :
         place += 1
     liste.append('?')
     for i in range(taille,place,-1) :
+        liste[i] = liste[i-1]
+    liste[place] = val
     return liste
 
-    
-    
-    
     
     
 liste = [1, 3, 5, 7, 9]
@@ -1248,6 +1247,19 @@ nombre = int(input("Entrez un nombre à insérer dans la liste triée : "))
 nouvelle_liste = inserer_dans_liste_triee(liste, nombre)
 print("Nouvelle liste après insertion :", nouvelle_liste)
 
+# QUESTION B :
+# INSERTION DANS LES LISTE CHAINNEES :
+
+class Noeud :
+    def __init__(self,valeur) :
+        self.valeur = valeur
+        self.suivant = None
+        
+class ListeChainee :
+    def __init__(self) :
+        self.tete = None
+        
+    
 
     
     
