@@ -127,6 +127,60 @@
 # # Exercice 2 :
 # # QUESTION B :
 
+# def intercaler(a: int, b: int) -> int:
+#     dizaine = a // 10
+#     unite = a % 10
+#     return dizaine * 1000 + b * 10 + unite
+
+# def saisieInt(min_val: int, max_val: int) -> int:
+#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     while valeur < min_val or valeur > max_val:
+#         print("Valeur incorrecte, réessayez.")
+#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     return valeur
+
+# # Programme principal
+# a = saisieInt(10, 99)
+# b = saisieInt(10, 99)
+# resultat = intercaler(a, b)
+# print("Le résultat est :", resultat)
+
+
+# # EXERCICE D :
+# def intercaler(a: int, b: int) -> int:
+#     dizaine = a // 10
+#     unite = a % 10
+#     return dizaine * 1000 + b * 10 + unite
+
+# def saisieInt(min_val: int, max_val: int) -> int:
+#     valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     while valeur < min_val or valeur > max_val:
+#         print("Valeur incorrecte, réessayez.")
+#         valeur = int(input(f"Entrez un entier entre {min_val} et {max_val} : "))
+#     return valeur
+
+# # Programme principal
+# a = saisieInt(10, 99)
+# b = saisieInt(10, 99)
+# resultat = intercaler(a, b)
+# print("Le résultat est :", resultat)
+
+# #  FICHE DE TD 2 :
+
+# # Exercice 1 :
+
+# def valeurAbsolue(x: float) -> float:
+#     if x < 0:
+#         return -x
+#     else:
+#         return x
+# print(valeurAbsolue(-7.5))  
+# print(valeurAbsolue(3.2))  
+
+
+# # Exercice 2 :
+# # QUESTION B :
+
 # def resoudreEquation(a: float, b: float) -> float:
 #     if a == 0:
 #         print("Pas de solution unique (a = 0)")
@@ -308,6 +362,8 @@
 
 # # EXERCICE 1 :
 # # QUESTION A :
+<<<<<<< HEAD
+=======
 
 # def puissanceIteratif(x: float, n: int) -> float:
 #     resultat = 1
@@ -361,6 +417,219 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  CHERCHER LA LISTE TRIE ET LA LISTE NON TRIE
+
+# listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
+# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# def chercher_trie(nbr,l) :
+#      ind = 0
+#      while ind < len(l) and l[ind] <= nbr:
+#           if l[ind] == nbr :
+#                return ind
+#           ind = ind + 1
+
+#      return -1
+
+
+# def progr() :
+#     n = int(input('vous cherchez quel valeur '))
+#     resu = chercher_trie(n,listeTriee)
+#     if(resu == -1) :
+#           print("la valeur",n,"ne se trouve pas dans la liste")
+
+#     else :
+#          print("la valeur",n,"se trouve a l'indice",resu)
+
+
+# progr()
+
+
+# listeTest = [12,36,25,36,16,36,15,25,41,78,98,45,36,89]
+# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# def chercher_trie(nbr,l) :
+#      ind = 0
+#      while ind < len(l) and l[ind] <= nbr:
+#           if l[ind] == nbr :
+#                return ind
+#           ind = ind + 1
+
+#      return -1
+
+
+# def search(nbr,l,bmin=0,bmax=None) :
+#     if bmax == None :
+#         bmax = len(l)-1
+#     if bmin > bmax or nbr < l[bmin] or nbr > l[bmax] :
+#          return -1
+
+#     m = (bmax - bmin) // 2
+#     if l[m] == nbr :
+#          return m
+#     elif l[m] > nbr :
+#          return search(nbr,l,bmin,m-1)
+#     else :
+#          return search(nbr,l,bmax,m+1)
+
+# def progr() :
+
+#     n = int(input('vous cherchez quel valeur '))
+    # resu = chercher_trie(n,listeTriee)
+    # if(resu == -1) :
+    #       print("la valeur",n,"ne se trouve pas dans la liste")
+
+    # else :
+    #      print("la valeur",n,"se trouve a l'indice",resu)
+
+
+# progr()
+
+
+
+
+# TD 5 EXERCICE 2 :
+
+# listeTest = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# listeTriee = [1,3,5,6,7,9,12,16,17,19,20]
+
+# Question A :
+
+# def nombre_occ_T(n,l) :
+#      cpt= 0
+#      for i in l :
+#           if(i == n) :
+#                cpt = cpt +1
+#      return cpt
+
+# def prog() :
+#      nbr = int(input("saisir le nombre\n"))
+#      resu = nombre_occ_T(nbr,12)
+#      print("le nombre d'occurence de",nbr,"dans la liste trie est :",resu)
+
+
+# QUESTION C :
+
+# def nombre_min_max(l) :
+#      max = l[0]
+#      min = l[0]
+#      for i in l :
+#           if(i>max) :
+#                max = l
+#           if(i<min) :
+#                min = l
+#      return min,max
+
+# def prog(l) :
+#      min,max = nombre_min_max(l)
+#      print("le nombre mini est",min,"le nombre maxi est:",max)
+
+# prog()
+
+# EXERCICE 3
+# QUESTION A :
+
+# def moyenne(liste: list) :
+#      somme = 0
+#      for i in listeTest :
+#           somme = somme + i
+#           i = i + 1
+
+#      return somme/len(listeTest)
+
+# def prog():
+#      resu = moyenne(listeTest)
+
+#      print("La moyenne de la liste ",listeTest,"est",resu)
+
+# prog()
+
+# QUESTION B :
+
+# l = [12,36,25,36,16,36,15,25,41,78,97,45,36,89]
+# l1 = [1,3,5,6,7,9,12,16,17,19,20]
+# l2 = [12,52,15,25,36,98,45,5,6,5,66,56,56,4,6]
+# l3 = [5,4,1,2,3,6,5,4,7,8,9,12,23,36,54,7,5,5]
+
+# def somme (l1,l2) :
+#     resultat = []
+#     for i in range(0,len(l1)) :
+#         resultat.append(l1[i] + l2[i])
+>>>>>>> 8a5ea934c0b899e3c4d4dac74239915dad973444
+
+# def puissanceIteratif(x: float, n: int) -> float:
+#     resultat = 1
+#     for i in range(n):
+#         resultat = resultat * x
+#     return resultat
+
+# print(puissanceIteratif(2, 5))
+
+# # QUESTION B:
+
+# def puissanceRecursif(x: float, n: int) -> float:
+#     if n == 0:
+#         return 1
+#     else:
+#         return x * puissanceRecursif(x, n - 1)
+
+
+# print(puissanceRecursif(2, 9)) 
+
+
+# def puissanceRapide(x: float, n: int) -> float:
+#     if n == 0:
+#         return 1
+#     elif n % 2 == 0:
+#         demi = puissanceRapide(x, n // 2)
+#         return demi * demi
+#     else:
+#         demi = puissanceRapide(x, n // 2)
+#         return x * demi * demi
+
+
+# print(puissanceRapide(2, 10))
+
+# # puissanceRapide est bien plus performant
+
+# # EXERCICE 2 :
+
+# # QUESTION A :
+
+
+# def divise(a: int, b: int) -> bool:
+#     return a % b == 0
+
+# print(divise(10, 2)) 
+# print(divise(10, 3))  
+# print(divise(9, 3)) 
+
+
+
+
+<<<<<<< HEAD
+
+
+=======
+r
+# def prog() :
+#     resu = note_etudiant()
+#     print(resu)
+>>>>>>> 8a5ea934c0b899e3c4d4dac74239915dad973444
 
 
 
@@ -615,6 +884,53 @@
 # #     print(resu)
 
 # # prog()
+
+
+
+# FICHE DE TD 6 :
+
+# EXERCICE 1 :
+
+# QUESTION A :
+
+etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
+{"nom": "Irakoze", "prenom": "Aline"},
+{"nom": "Nkurunziza", "prenom": "Kevin"},
+{"nom": "Hakizimana", "prenom": "Samuel"},
+{"nom": "Uwimana", "prenom": "Grace"}]
+
+def saisiNote(liste) :
+    for i in range(0,len(liste)) :
+        print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
+        note = int(input())
+        liste[i]["note"]= note
+    return liste
+
+def prog() :
+    l1= saisiNote(d)
+    print(l1)
+
+prog()
+
+# QUESTION B :
+
+def meilleur(liste :list)->list :
+    max = 0
+    l=[]
+    for i in range(0,len(liste)) :
+        if(max< liste[i]["note"]) :
+            max = liste[i]["note"]
+
+
+    for i in range(0,len(0,len(liste))) :
+        if (max==liste[i]["note"]) :
+            l.append((liste[i]["nom"],liste[i]["prenom"]))
+
+    return l
+
+def prog() :
+    l2 =meilleur(l1)
+
 
 
 
