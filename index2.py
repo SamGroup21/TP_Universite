@@ -362,8 +362,6 @@
 
 # # EXERCICE 1 :
 # # QUESTION A :
-<<<<<<< HEAD
-=======
 
 # def puissanceIteratif(x: float, n: int) -> float:
 #     resultat = 1
@@ -569,7 +567,6 @@
 #     resultat = []
 #     for i in range(0,len(l1)) :
 #         resultat.append(l1[i] + l2[i])
->>>>>>> 8a5ea934c0b899e3c4d4dac74239915dad973444
 
 # def puissanceIteratif(x: float, n: int) -> float:
 #     resultat = 1
@@ -619,18 +616,9 @@
 # print(divise(9, 3)) 
 
 
-
-
-<<<<<<< HEAD
-
-
-=======
-r
 # def prog() :
 #     resu = note_etudiant()
 #     print(resu)
->>>>>>> 8a5ea934c0b899e3c4d4dac74239915dad973444
-
 
 
 
@@ -893,24 +881,24 @@ r
 
 # QUESTION A :
 
-etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
-{"nom": "Irakoze", "prenom": "Aline"},
-{"nom": "Nkurunziza", "prenom": "Kevin"},
-{"nom": "Hakizimana", "prenom": "Samuel"},
-{"nom": "Uwimana", "prenom": "Grace"}]
+# etudiants = [{"nom": "Niyonkuru", "prenom": "David"},
+# {"nom": "Irakoze", "prenom": "Aline"},
+# {"nom": "Nkurunziza", "prenom": "Kevin"},
+# {"nom": "Hakizimana", "prenom": "Samuel"},
+# {"nom": "Uwimana", "prenom": "Grace"}]
 
-def saisiNote(liste) :
-    for i in range(0,len(liste)) :
-        print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
-        note = int(input())
-        liste[i]["note"]= note
-    return liste
+# def saisiNote(liste) :
+#     for i in range(0,len(liste)) :
+#         print("saisi la note de : ",liste[i]["nom"], " ",liste[i]["prenom"])
+#         note = int(input())
+#         liste[i]["note"]= note
+#     return liste
 
-def prog() :
-    l1= saisiNote(d)
-    print(l1)
+# def prog() :
+#     l1= saisiNote(d)
+#     print(l1)
 
-prog()
+# prog()
 
 # QUESTION B :
 
@@ -928,8 +916,55 @@ def meilleur(liste :list)->list :
 
     return l
 
-def prog() :
-    l2 =meilleur(l1)
+# def prog() :
+#     l2 =meilleur(l1)
+
+# def transpose() :
+
+#     mat = [ 
+#             [2,2,2,2],
+#             [3,3,3,3],
+#             [4,4,4,4]
+#         ]
+           
+        
+#     nb_ligne = len(mat)
+#     nb_colone = len(mat[0])
+
+#     mat_transpose = [[0 for j in range(nb_ligne)] for i in range(nb_colone)]
+    
+#     for i in range(nb_ligne) :
+#         for j in range(nb_colone) :
+#             mat_transpose[j][i] = mat[i][j]
+            
+#         return mat_transpose
+    
+def matrice(nb_ligne:int,nb_colone:int)-> list :
+    matr = []
+    for i in range(nb_ligne) :
+        matr.append([])
+        for j in range(nb_colone) :
+            matr[i].append(0)
+    return matr
+# print(matrice(3, 4),end=" ")
+
+def afficher_matrice(matrice) :
+    nb_ligne = len(matrice)
+    nb_colonne = len(matrice[0])
+    
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            print(matrice[i][j],end=" ")
+        print()
+        
+    
+
+ 
+        
+        
+
+
+    
 
 
 
@@ -961,3 +996,13 @@ def prog() :
 
 
 
+
+
+
+
+
+
+
+
+
+ 

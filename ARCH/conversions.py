@@ -455,46 +455,44 @@ def change_a_bit_in_float(value, bit_position):
 
 # QUESTION 1 :
 
-# print(31415)
-# print("{:b}".format(9754))
-# print("{:o}".format(3649))
-# print("{:x}".format(89894))
-# print("{:X}".format(89894))
+print(31415)
+print("{:b}".format(9754))
+print("{:o}".format(3649))
+print("{:x}".format(89894))
+print("{:X}".format(89894))
 
 # QUESTION 2 : 
 
-# print(1331)
-# print(bin(1331))
-# print(oct(1331))
-# print(hex(1331))
+print(1331)
+print(bin(1331))
+print(oct(1331))
+print(hex(1331))
 
-# """"""""""""""""""""""""""""""""""""""A REVENIR"""""""""""""""""""""""""""""""""""""""""""""""""""
+def convertir_base(x) :
 
-# def convertir_base(x) :
+    n = int(input("saisi la valeur de n"))
+    if n == 0 :
+        return [0]
 
-#     n = int(input("saisi la valeur de n"))
-#     if n == 0 :
-#         return [0]
-
-#     else :
+    else :
             
-#         reste=[]
-#         while(n!=0) :
-#             le_reste = n/x
-#             reste.append(le_reste)
-#             n = n//x
+        reste=[]
+        while(n!=0) :
+            le_reste = n/x
+            reste.append(le_reste)
+            n = n//x
 
-#         reste.reverse()
+        reste.reverse()
 
 
-#         return reste
+        return reste
 
-# def prog() :
-#     x = int(input("saisi la base x : "))
-#     resu = convertir_base(x)
-#     print(resu)
+def prog() :
+    x = int(input("saisi la base x : "))
+    resu = convertir_base(x)
+    print(resu)
 
-# prog()
+prog()
 
 # QUESTION 3 :
 
@@ -502,23 +500,23 @@ def change_a_bit_in_float(value, bit_position):
 
 # Quand n est entre 0 et 9 :
 
-# print(chr(ord('0')+1))
-# print(chr(ord('0')+2))
-# print(chr(ord('0')+3))
+print(chr(ord('0')+1))
+print(chr(ord('0')+2))
+print(chr(ord('0')+3))
 # ..
 # .
 # .
 # .
-# print(chr(ord('0')+9))
+print(chr(ord('0')+9))
 
 # Quand n>= 10 :
 
-# print(chr(ord('0')+10)) 
+print(chr(ord('0')+10)) 
 # .
 # .
 # .
 # .
-# print(chr(ord('0')+n))
+print(chr(ord('0')+n))
 
 
 # QUESTION 4 : 
@@ -548,17 +546,141 @@ def integer_to_digit(n):
         return chr(ord('A') + n - 10)
     
 print(integer_to_digit(14))
+
+
+# QUESTION 6:
+
+def integer_to_string(n: int, b: int) -> str:
+    chiffres = "0123456789ABCDEF"
+    if n < b:
+        return chiffres[n]
+    else:
+        return integer_to_string(n // b, b) + chiffres[n % b]
+
+# Tests
+print(integer_to_string(20, 2)) 
+print(integer_to_string(20, 8))  
+print(integer_to_string(20, 16)) 
+print(integer_to_string(10, 16))  
     
-    
-    
+# QUESTION 7 :
+
+def display_20_integers():
+    for i in range(21):
+        print("{:2d} : {:>6s}{:>4s}{:>4s}".format(
+            i,
+            integer_to_string(i, 2),
+            integer_to_string(i, 8),
+            integer_to_string(i, 16)
+        ))
 
 
+display_20_integers()
+
+# QUESTION 8 :
+
+bin(0b100100 & 0b110000)
+bin(0b101001 & 0b110011)
+bin(0b10001 & 0b1111)
+bin(0b100101 & 0b111000)
+
+# QUESTION 9 :
+
+# >>> bin(5)        # 5 = 0b101
+# '0b101'
+# >>> 5 << 1         # décale → 0b1010 = 10
+# 10
+# >>> 5 >> 1         # décale → 0b10 = 2 (le dernier bit "1" est perdu)
+# 2
+
+# QUESTION 10 :
+
+def power_two(n: int) -> int:
+    return 1 << n
 
 
+print(power_two(0)) 
+print(power_two(3))  
+print(power_two(10))  
+
+# QUESTION 11 :
+
+def is_even(n: int) -> bool:
+    return (n & 1) == 0
+
+print(is_even(4))
+print(is_even(7))   
+print(is_even(0))
+
+# QUESTION 12 :
+
+def most_least_significant_bits_str(octet: int) -> str:
+    s = integer_to_string(octet, 2)
+    while len(s) < 8:
+        s = "0" + s
+    return s[0] + s[7]
+
+print(most_least_significant_bits_str(0b00000101))
+print(most_least_significant_bits_str(0b10000100))   
 
 
+# QUESTION 13 :
+
+def most_least_significant_bits(octet: int) -> int:
+    msb = (octet >> 7) & 1
+    lsb = octet & 1
+    return (msb << 1) | lsb
+
+print(bin(most_least_significant_bits(0b00000101))) 
+print(bin(most_least_significant_bits(0b10000100))) 
+
+# QUESTION 14 :
+
+import timeit
+timeit.timeit('most_least_significant_bits_str(0b10000101)', setup='from __main__ import most_least_significant_bits_str')
+timeit.timeit('most_least_significant_bits(0b10000101)', setup='from __main__ import most_least_significant_bits')
+
+# la version most_least_significant_bits (opérateurs logiques &, >>, <<, |) sera nettement plus rapide que most_least_significant_bits_str (qui passe par une conversion en chaîne de caractères)
+
+# QUESTION 15 :
+
+def isolate_bit(value: int, pos: int) -> int:
+    return (value >> pos) & 1
+
+print(isolate_bit(4, 2))
+print(isolate_bit(5, 5))  
+
+# QUESTION 16  :
+
+def isolate_bits(value: int, positions: list) -> int:
+    resultat = 0
+    for pos in positions:
+        resultat = (resultat << 1) | isolate_bit(value, pos)
+    return resultat
+
+print(isolate_bits(4, [0, 2, 4])) 
+print(isolate_bits(5, [2, 1]))   
+
+# QUESTION 17  :
+
+def mask1(length: int) -> int:
+    return (1 << length) - 1
+
+print(mask1(0))
+print(mask1(3))  
+print(mask1(10))  
 
 
+# QUESTION 18 :
+
+def isolate_consecutive_bits(value: int, msb_pos: int, nb_bits: int) -> int:
+    decalage = msb_pos - nb_bits + 1
+    return (value >> decalage) & mask1(nb_bits)
+
+
+print(isolate_consecutive_bits(4, 2, 2))             
+print(isolate_consecutive_bits(0b100110110, 5, 4)) 
+print(isolate_consecutive_bits(0b110110110, 9, 3))   
 
 
 
