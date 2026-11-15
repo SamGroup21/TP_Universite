@@ -1143,11 +1143,44 @@ def main()  :
         
         
 
-main()      
+# main()      
         
+#  Matrice Monotone :       
         
+ def estMonotone(nb_ligne,nb_colonne,matrice) :
+     for i in ranga(nb_ligne) :
+         for j in range(1,nb_colonne) :
+             if matrice[i][j] < matrice[i][j-1] :
+                 return False
+                
+     return True
+ 
+#  Matrice Majoritaire :
+    
+def estMajoritaire(nb_ligne:int,nb_colonne :int,matrice :list[list[int]]) -> bool :
+    compteur = 0
+    compteur1 = 0
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            if matrice[i][j] == 1 :
+                compteur = compteur +1
+                
+            elif matrice[i][j] == 0 :
+                compteur2 = compteur +1
+                
+        if compteur < compteur1 :
+            return False
+        else :
+            return True
         
-        
+
+
+            
+              
+                 
+                 
+            
+
 
 
 
