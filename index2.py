@@ -939,44 +939,151 @@ def meilleur(liste :list)->list :
             
 #         return mat_transpose
     
-def matrice(nb_ligne:int,nb_colone:int)-> list :
-    matr = []
-    for i in range(nb_ligne) :
-        matr.append([])
-        for j in range(nb_colone) :
-            matr[i].append(0)
-    return matr
-# print(matrice(3, 4),end=" ")
+# def matrice(nb_ligne:int,nb_colone:int)-> list :
+#     matr = []
+#     for i in range(nb_ligne) :
+#         matr.append([])
+#         for j in range(nb_colone) :
+#             matr[i].append(0)
+#     return matr
+# # print(matrice(3, 4),end=" ")
 
+# def afficher_matrice(matrice) :
+#     nb_ligne = len(matrice)
+#     nb_colonne = len(matrice[0])
+    
+#     for i in range(nb_ligne) :
+#         for j in range(nb_colonne) :
+#             print(matrice[i][j],end=" ")
+#         print()
+#exercice 1 :
+    
 def afficher_matrice(matrice) :
     nb_ligne = len(matrice)
     nb_colonne = len(matrice[0])
     
     for i in range(nb_ligne) :
         for j in range(nb_colonne) :
-            print(matrice[i][j],end=" ")
+            print(matrice[i][j],end="\t")
+        
         print()
+    print()
+    
+#exercice 2 :
+    
+def saisir_matrice(matrice) :
+    nb_ligne = len(matrice)
+    nb_colonne = len(matrice[0])
+    
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            
+            matrice[i][j] = int(input(f"saisir la valeur sur l'indice [{i}][{j}] :"))
+    print()                           
+                          
+#exerice 3 :
+    
+def matrice_equilibre(matrice) :
+    
+    nb_ligne = len(matrice)
+    nb_colonne = len(matrice[0])
+    
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            
+            valeur = matrice[i][j]
+            
+            est_paire = (valeur % 2 == 0)
+            
+            if i > 0 :
+                elt_haut = matrice[i-1][j]
+                if est_paire == (elt_haut % 2== 0) :
+                    return False
+                
+            if i < nb_ligne-1 :
+                elt_bas = matrice[i+1][j]
+                if est_paire == (elt_bas % 2 ==0) :
+                    return False
+                
+            if j > 0 :
+                elt_gauche = matrice[i][j-1]
+    
+                if est_paire == (elt_gauche % 2 ==0) :
+                    return False
+                
+            if j < nb_colonne-1 :
+                elt_droite = matrice[i][j+1]
+                if est_paire == (elt_droite % 2 == 0) :
+                    return False
+                
+    return True
+
+#exercice 4 :
+    
+    
+def main() :
+    nb_ligne = int(input("combien de nombre de ligne : "))
+    nb_colonne = int(input("combien de nombre de colonne : "))
+     
+    #matrice = [[0]*nb_colonne for_ in range(nb_ligne)]
+    matrice = []
+    
+    for i in range(nb_ligne) :
+      ligne = []
+      for j in range(nb_colonne) :
+        ligne.append(0)
         
+      matrice.append(ligne)
+      
+    
+    
+    
+    print("------SAISIR LES VALEUR------ \n")
+    
+    saisir_matrice(matrice)
+    
+    print("---------AFFICHER LA MATRICE--------\n")
+    
+    afficher_matrice(matrice)
+    
+    print("----VERIFICATION-----\n")
+    
+    if matrice_equilibre(matrice) :
+        print("la matrice est equilibre")
+        
+    else :
+        print("la matrice n'est pas equilibre")
+    
+    
+    
+main()  
+    
+    
     
 
- 
-        
-        
-
-
     
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
