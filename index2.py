@@ -1059,7 +1059,7 @@ def main() :
 # main()  
     
     
-def affMatrice(nb_ligne:int,nb_colonne:int,matrice :[list[list[int]]]) :
+def affMatrice(nb_ligne:int,nb_colonne:int,matrice) :
     nb_ligne = len(matrice)
     nb_colonne = len(matrice[0])
     
@@ -1081,7 +1081,7 @@ def saisir_valeur(nb_ligne,nb_colonne,matrice) :
     
     
     
-def  estRectangle(nb_ligne:int,nb_colonne :int,matrice :[list[list[int]]]) -> bool :
+def  estRectangle(nb_ligne:int,nb_colonne :int,matrice) -> bool :
     
     sommeLigne :int = []
     for i in range(nb_ligne):
@@ -1164,13 +1164,21 @@ def estMajoritaire(nb_ligne:int,nb_colonne :int,matrice :list[list[int]]) -> boo
                 compteur = compteur +1
                 
             elif matrice[i][j] == 0 :
-                compteur2 = compteur +1
+                compteur1 = compteur1 +1
                 
         if compteur < compteur1 :
             return False
         else :
             return True
         
+def symetrique(nb_ligne,nb_colonne,matrice) :
+    if nb_ligne != nb_colonne :
+        return False
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            if matrice[i][j] != matrice[j][i] :
+                return False
+    return True
 
 
             
