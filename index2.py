@@ -1180,7 +1180,19 @@ def symetrique(nb_ligne,nb_colonne,matrice) :
                 return False
     return True
 
-
+def diagonal(nb_ligne,nb_colonne,matrice) :
+    if nb_ligne != nb_colonne :
+        return False
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            if i!=j :
+                if matrice[i][j] != 0 :
+                    
+                    return False
+                
+                
+    return True
+    
             
               
                  
