@@ -1056,9 +1056,118 @@ def main() :
     
     
     
-main()  
+# main()  
     
     
+def affMatrice(nb_ligne:int,nb_colonne:int,matrice :[list[list[int]]]) :
+    nb_ligne = len(matrice)
+    nb_colonne = len(matrice[0])
+    
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            print(matrice[i][j],end= "\t")
+            
+        print()
+        
+    print()
+    
+def saisir_valeur(nb_ligne,nb_colonne,matrice) :
+    for i in range(nb_ligne) :
+        for j in range(nb_colonne) :
+            matrice[i][j] = int(input(f"saisis la valeur pour la case [{i}][{j}] :"))
+            
+    return matrice
+    
+    
+    
+    
+def  estRectangle(nb_ligne:int,nb_colonne :int,matrice :[list[list[int]]]) -> bool :
+    
+    sommeLigne :int = []
+    for i in range(nb_ligne):
+        sommeL :int = 0
+        for j in range(nb_colonne) :
+            sommeL = sommeL + matrice[i][j]
+            
+        sommeLigne.append(sommeL)
+        
+    sommeColonne :int = []
+    for j in range(nb_colonne) :
+        sommeC :int = 0
+        for i in range(nb_ligne) :
+            sommeC = sommeC + matrice[i][j]
+            
+        sommeColonne.append(sommeC)
+        
+    somme = []
+    somme = sommeLigne + sommeColonne
+    
+    valeur = somme[0]
+    i = 0
+    while i<len(somme) :
+        if valeur != somme[i] :
+            return False
+        i = i+1
+        
+    return True  
+        
+def main()  :
+    
+    nb_ligne = int(input("combien de ligne :"))
+    nb_colonne = int(input("combien de colonne :"))
+    
+    matrice = []
+    
+    for i in range(nb_ligne):
+        ligne=[]
+        for j in range(nb_colonne) :
+            ligne.append(0)
+            
+        matrice.append(ligne)
+        
+    print("----SAISIR LA VALEUR------\n")
+    
+    matrice = saisir_valeur(nb_ligne,nb_colonne,matrice)
+    
+    print("----AFFICHER LA MATRICE------\n")
+    
+    affMatrice(nb_ligne,nb_colonne,matrice)
+    
+    print("----TESTER L'EQUILIBRE------\n")
+    
+    if estRectangle(nb_ligne,nb_colonne,matrice) :
+        print("la matrice est jolie")
+        
+    else :
+        print("la matrice n'est pas jolie")
+        
+        
+
+main()      
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
     
