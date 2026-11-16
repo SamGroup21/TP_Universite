@@ -1183,19 +1183,52 @@ def symetrique(nb_ligne,nb_colonne,matrice) :
 def diagonal(nb_ligne,nb_colonne,matrice) :
     if nb_ligne != nb_colonne :
         return False
-    for i in range(nb_ligne) :
-        for j in range(nb_colonne) :
-            if i!=j :
-                if matrice[i][j] != 0 :
+    else :
+        for i in range(nb_ligne) :
+            for j in range(nb_colonne) :
+                if i!=j :
+                    if matrice[i][j] != 0 :
+                        
+                        return False
                     
-                    return False
-                
                 
     return True
     
             
               
-                 
+def estRectangleDivision(matrice) :
+    resultatL = []
+    for i in range(nb_ligne) :
+        divisionL = matrice[i][0]
+        for j in range(1,nb_colonne) :
+            if matrice[i][j] == 0:
+                return False
+            divisionL = divisionL/matrice[i][j]
+            
+        resultatL.append(divisionL)
+        
+    resultatC = []
+    for j in range(nb_colonne) :
+        divisionC = matrice[0][j]
+        for i in range(1,nb_ligne) :
+              if matrice[i][j] == 0:
+                return False
+            
+              divisionC= divisionC/ matrice[i][j]
+              
+        resultatC.append(divisionC)
+        
+        tous_resultat =[]
+        tous_resultat = resultatC + resultatL
+        
+        valeur = tous_resultat[0]
+        k = 0
+        while k<len(tous_resultats) :
+            if tous_resultat[0] != tous_resultat[i] :
+                return False
+            
+            k = k+1
+        return True                 
                  
             
 
