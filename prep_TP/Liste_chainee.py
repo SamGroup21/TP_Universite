@@ -65,6 +65,92 @@ def delAt(lst:Liste,n:int):
     suiv = elt.suivant.suivant
     elt.suivant = suiv
     return val
+
+
+#class Instant :
+    #def __init__(self,heure= 0,minute = 0,seconde= 0) :
+   #     self.h = heure
+  #      self.m= minute
+ #       self.s= seconde
+        
+#toto = Instant(12,45,52)
+#print(toto.h,toto.m,toto.s)
+#titi= Instant(50)
+#print(titi.h,titi.m,titi.s)
+
+#question a et b
+
+class Instant :
+    def __init__(self,heure = 0,minute= 0,seconde = 0) :
+        self.h = heure
+        self.m= minute
+        self.s= seconde
+        
+    def __str__(i) :             #methode : fonction qu'on appele a prtie de l'objet
+            return f"{i.h:02}: {i.m:02}:{i.s:02}"         
+def read_Instant() :
+    
+    heure =int(input(" entrer l'heure : "))
+    minute = int(input("entrer les minute : "))
+    seconde= int(input("entrer les secondes : "))
+    
+    return Instant(heure,minute,seconde)
+
+#QUESTION D :
+
+def isValid(self)->bool :
+    return 0<=self.h<=24 and 0<=self.m<=60 and 0<=self.s<=60
+
+
+def __add__()(self,another :Instant) ->  :
+    
+    s = self.s +another.s
+    if(s>59) :
+        rem=1
+        s=s-60
+    else :
+        rm = 0
+        
+    m = self.m +another.m + rm
+    if(m>59) :
+        rm=1
+        s= s-60
+        
+    else :
+        rm = 0
+        m = self.m+another.m + rm
+
+        
+
+
+#QUESTION C
+
+def print_Instant(i :Instant) -> None :
+    print(f"{i.h:02}: {i.m:02}:{i.s:02}")
+    
+    
+    
+
+#toto = read_Instant()
+toto = Instant(12,50,23)
+print(toto.__str__())
+#print_Instant(toto)
+#print_Instant(toto.toStr)
+print(f"{toto.isValid}")
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
 def prog() :
     print("")
 if __name__=="__main__" :
