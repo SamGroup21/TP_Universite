@@ -80,6 +80,9 @@ def delAt(lst:Liste,n:int):
 
 #question a et b
 
+# FICHE DE TD 11 :
+
+
 class Instant :
     def __init__(self,heure = 0,minute= 0,seconde = 0) :
         self.h = heure
@@ -102,7 +105,7 @@ def isValid(self)->bool :
     return 0<=self.h<=24 and 0<=self.m<=60 and 0<=self.s<=60
 
 
-def __add__()(self,another :Instant) ->  :
+def __add__(self,another :Instant) ->  :
     
     s = self.s +another.s
     if(s>59) :
