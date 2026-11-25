@@ -90,7 +90,10 @@ class Instant :
         self.s= seconde
         
     def __str__(i) :             #methode : fonction qu'on appele a prtie de l'objet
-            return f"{i.h:02}: {i.m:02}:{i.s:02}"         
+            return f"{i.h:02}: {i.m:02}:{i.s:02}"    
+        
+# question b :
+     
 def read_Instant() :
     
     heure =int(input(" entrer l'heure : "))
@@ -131,32 +134,75 @@ def __add__(self,another :Instant) ->  :
 def print_Instant(i :Instant) -> None :
     print(f"{i.h:02}: {i.m:02}:{i.s:02}")
     
+#QUESTION E :    
+
+def estPlusRecent(t1,t2)-> bool :
+    if t1.h < t2.h :
+        return False
+    elif t1.h > t2.h :
+        return True
+    elif t1.m < t2.m :
+        return False
+    elif t1.m > t2.m :
+        return True
+    elif t1.s < t2.s :
+        return False
+    else :
+        return True
+    
+#QUESTION G :
+    
+def duree(debut,fin) :
+    debut = debut.h*3600+debut.m*60+debut.s
+    fin = fin.h*3600+fin.m*60+fin.s
+    diff = abs(debut-fin)
+    diff_h = diff//3600
+    diff = diff%3600
+    diff_m = diff//60
+    diff_s = diff %60
+    return Instant(diff_h,diff_m,diff_s)
     
     
-
-#toto = read_Instant()
-toto = Instant(12,50,23)
-print(toto.__str__())
-#print_Instant(toto)
-#print_Instant(toto.toStr)
-print(f"{toto.isValid}")
-
-
+def fonc(a,b,operation:str) :
+    a=int(input("entrer a : "))
+    b=int(input("entre b : "))
+    operation = input("quel est l'operation")
     
-
+    if operation == "+" :
+        return a+b
+    elif operation == "-" :
+        return a-b
+    elif operation == "/" :
+        return a/b
+    else :
+        return None
     
-
-
-
-
-
-
-
-
 
 def prog() :
-    print("")
-if __name__=="__main__" :
+    #maintenant = read_Instant()
+    #print_Instant(maintenant)
+    #apres = read_Instant()
+    #print_Instant(apres)
+    #print(estPlusRecent(apres,maintenant))
+    #temps = duree(maintenant,apres)
+    #print_Instant(temps)
     
-    prog()
+    print(fonc(0,0,'+'))
+
+    
+    
+prog()
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
 
