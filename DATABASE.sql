@@ -34,12 +34,6 @@ create table destinataire(
     foreign key (id_message) references  message
 );
 
-alter table liste add column nom text not null ;
-
-select  * from utilisateur
-
-
-
 insert into utilisateur
 values
 ('samuel','samuel20@)gmail.com'),
@@ -64,6 +58,12 @@ insert into destinataire
 values
 (2,3),
 (1,4);
+
+
+alter table liste add column nom text not null ;
+
+select  * from utilisateur
+
 
 
 
