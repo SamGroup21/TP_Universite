@@ -205,16 +205,126 @@ def retrait_etudiant(liste) :
             
     return liste
         
+# liste = []
+# #etudiant1 = saisir_information()
+# #liste.append(etudiant1)
+# ajouter_etudiant(liste)
+# afficher_etudianat(liste)
+# ajouter_etudiant(liste)
+# afficher_etudiant(liste)
+# #recherche_etudiant(liste)
+# retrait_etudiant(liste)
+
+
+
+# FICHE  DE TP 5 :INITIATION AU DEVELOPPEMENT :
+
+
+class Etudiant :
+    def __init__(self,nom,prenom,anne_naissance,moyenne,promotion) :
+        self.nom = nom
+        self.prenom = prenom
+        self.anne_naissance = anne_naissance
+        self.moyenne = moyenne
+        self.promotion = promotion
         
-liste = []
-#etudiant1 = saisir_information()
-#liste.append(etudiant1)
-ajouter_etudiant(liste)
-afficher_etudianat(liste)
-ajouter_etudiant(liste)
-afficher_etudiant(liste)
-#recherche_etudiant(liste)
-retrait_etudiant(liste)
+
+
+def saisir_information() :
+    nom = input("entrer le nom de l'etudiant : ")
+    prenom = input("entre le prenom de l'etudiant : ")
+    anne_naissance = int(input("entrer l'anne de naissance de l'etudiant : "))
+    moyenne = int(input("entrer la moyenne de l'etudiant : "  ))
+    promotion = int(input("il est de quel promotion (1 ou 2) :"))
+    
+    while promotion !=1 and promotion !=2 :
+        promotion = int(input("il est de quel promotion (1 ou 2) :"))
+        
+    nouvel_etudiant = Etudiant(nom, prenom, anne_naissance,moyenne,promotion)
+    
+    return nouvel_etudiant
+
+
+def afficher_etudiant(liste_etudiant) :
+    for etudiant in liste_etudiant :
+        print(f"Nom : {etudiant.nom}, Prenom : {etudiant.prenom},Anne de naissance : {etudiant.anne_naissance},Moyenne : {etudiant.moyenne}, Promotion : {etudiant.promotion}")
+        
+    return
+
+
+
+def ajouter_etudiant(liste) :
+    autre_etudiant = saisir_information()
+    liste.append(autre_etudiant)
+    
+    return liste
+
+def rechercher_etudiant(liste,qui) :
+    taille = len(liste)
+    for i in range(taille) :
+        if liste[i].nom == qui :
+            print(f"l'etudiant {qui} est sur l'indice {i}")
+        
+    return -1
+
+def retrait_etudiant(liste,suprimme) :
+    indice = rechercher_etudiant(liste,suprimme)
+    if indice != -1 :
+       del liste[indice]
+       print("l'etudiant à ete supprimé")
+            
+    return liste
+
+def trier_etudiant(liste) :
+    n = len(liste)
+    
+    for i in range(n) :
+        indice_max = i
+        for j in range(i+1,n) :
+            if liste[j].moyenne > liste[indice_max].moyenne :
+               indice_max = j
+               
+        liste[i],liste[indice_max] = liste[indice_max],liste[i]
+               
+    return liste
+
+def major_promotion() :
+    
+    
+    
+
+
+
+
+
+def prog():
+    #etudiant1 = Etudiant("Isaac","Ibrahim",2000,50,2)
+    #print(etudiant1.nom)
+    #print(etudiant1.prenom)
+    liste = []
+    liste.append(saisir_information())
+    afficher_etudiant(liste)
+    ajouter_etudiant(liste)
+    afficher_etudiant(liste)
+    #qui = input("vous chercher qui : ")
+    #rechercher_etudiant(liste,qui)
+    #suprimme = input("on supprime qui : ")
+    #retrait_etudiant(liste,suprimme)
+    trier_etudiant(liste)
+    
+    
+prog()
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
 
 
 
@@ -222,15 +332,3 @@ retrait_etudiant(liste)
 
 
     
-    
-prog()
-    
-
-
-
-
-
-
-if __name__=="__main__" :
-    
-    prog()
